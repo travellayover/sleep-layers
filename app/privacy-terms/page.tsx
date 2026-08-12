@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import { PolicyPage } from "@/components/public/policy-page";
 
 export const metadata: Metadata = {
-  title: "Privacy & Terms — Sleep Layers",
-  description: "How Sleep Layers handles personal data and the terms of using this site.",
+  title: "Privacy & Terms — MySleepLabs",
+  description: "How MySleepLabs handles personal data and the terms of using this site.",
 };
 
 export default function PrivacyTermsPage() {
   return (
     <PolicyPage
       title="Privacy & Terms"
-      description="How Sleep Layers handles personal data and the terms of using this site."
-      intro="Sleep Layers collects the minimum data needed to operate this site. The newsletter stores your email address only. Affiliate links may set cookies on the retailer's domain. We do not sell or share your email address."
+      description="How MySleepLabs handles personal data and the terms of using this site."
+      intro="MySleepLabs collects the minimum data needed to operate this site. The newsletter stores your email address only. Affiliate links may set cookies on the retailer's domain. We do not sell or share your email address."
       sections={[
         {
           heading: "What we collect",

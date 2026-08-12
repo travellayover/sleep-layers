@@ -1,4 +1,4 @@
-// Checkout stubs for the Sleep Layers consumer preview.
+// Checkout stubs for the MySleepLabs consumer preview.
 //
 // Order model:
 //   - Each checkout is a pending order keyed by `session` (a UUID).

@@ -1,44 +1,61 @@
 @import "tailwindcss";
 
 /* =========================================================================
- * MySleepLabs — Lab Notebook Design System
+ * MySleepLabs — Brand Design System
  *
- * Locked palette: dark navy + warm amber + paper.
- * Typography: serif headlines (Tiempos-style) + sans body (Inter) + mono data (Plex Mono).
- * Motion: amber accents breathe; navy surfaces set the substrate.
+ * Logo-locked: deep navy + sleep periwinkle + sparse gold.
+ * Surfaces: warm light / off-white paper (public site).
+ * Dark navy reserved for night scene frames, circular mark, contrast blocks.
+ * Typography: serif headlines + sans body + mono data.
+ * Motion: restrained; no glow-heavy UI, no particle spam.
  * ========================================================================= */
 
 @theme {
-  /* Surfaces — dark navy substrate */
-  --color-bg: #0B1220;
-  --color-bg-raised: #111A2E;
-  --color-bg-hover: #16223C;
-  --color-bg-sunken: #070D18;
+  /* Surfaces — warm paper */
+  --color-bg: #F7F4EE;
+  --color-bg-raised: #FFFcf8;
+  --color-bg-hover: #EFEBE3;
+  --color-bg-sunken: #EBE6DC;
 
-  /* Text — paper foreground */
-  --color-fg: #F2EDDF;          /* warm paper, not white */
-  --color-fg-muted: #B8B0A0;     /* dusty paper */
-  --color-fg-faint: #7D7768;     /* aged paper */
+  /* Brand anchors (also generate Tailwind utilities) */
+  --color-navy: #00143C;
+  --color-amber: #F8B840;
+  --color-amber-hover: #E5A52E;
+  --color-paper: #FFFcf8;
+  --color-paper-2: #EFEBE3;
 
-  /* Accent — warm amber, the single color */
-  --color-accent: #F4A02C;
-  --color-accent-hover: #E08D1A;
-  --color-accent-soft: rgba(244, 160, 44, 0.12);
+  /* Text — navy on paper */
+  --color-fg: #00143C;
+  --color-fg-muted: #4A556F;
+  --color-fg-faint: #7A8499;
+
+  /* Sleep — periwinkle from logo middle wave / "Sleep" */
+  --color-sleep: #505AE6;
+  --color-sleep-hover: #3F4AD4;
+  --color-sleep-soft: rgba(80, 90, 230, 0.10);
+
+  /* Gold soft wash — brand spark backgrounds (shadcn --accent is separate) */
+  --color-accent-soft: rgba(248, 184, 64, 0.14);
 
   /* Lines + dividers */
-  --color-rule: #1F2A40;
-  --color-rule-light: #182236;
+  --color-rule: #E0D9CE;
+  --color-rule-light: #EBE6DC;
+
+  /* Night contrast — circular mark / night scenes only */
+  --color-night: #00143C;
+  --color-night-raised: #0A1A4A;
+  --color-night-fg: #F4F2EC;
 
   /* Signals */
-  --color-signal-green: #4ADE80;
-  --color-signal-amber: #FBBF24;
-  --color-signal-red: #F87171;
-  --color-signal-success: #22C55E;
+  --color-signal-green: #16A34A;
+  --color-signal-amber: #D97706;
+  --color-signal-red: #DC2626;
+  --color-signal-success: #15803D;
 
-  /* Typography — three families, locked */
-  --font-serif: "Tiempos Text", "Source Serif Pro", Charter, "Iowan Old Style", "Apple Garamond", Georgia, ui-serif, serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Monaco, "Cascadia Code", monospace;
+  /* Typography — three families, locked (loaded via next/font CSS vars on <html>) */
+  --font-serif: var(--font-serif-loaded), "Source Serif 4", Charter, "Iowan Old Style", Georgia, ui-serif, serif;
+  --font-sans: var(--font-sans-loaded), "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-mono-loaded), "IBM Plex Mono", ui-monospace, "SF Mono", Monaco, monospace;
 
   /* Type scale — fluid, base 14px */
   --text-xs: 0.6875rem;          /* 11 */
@@ -74,20 +91,20 @@
   --radius-2xl: 2rem;
   --radius-full: 9999px;
 
-  /* Shadows — warm-toned, never harsh */
-  --shadow-xs: 0 1px 2px rgba(11, 18, 32, 0.4);
-  --shadow-sm: 0 2px 4px rgba(11, 18, 32, 0.4), 0 1px 2px rgba(11, 18, 32, 0.3);
-  --shadow-md: 0 8px 16px -4px rgba(11, 18, 32, 0.5), 0 2px 4px rgba(11, 18, 32, 0.3);
-  --shadow-lg: 0 16px 32px -8px rgba(11, 18, 32, 0.6), 0 4px 8px rgba(11, 18, 32, 0.4);
-  --shadow-glow: 0 0 0 1px var(--color-accent), 0 8px 24px -4px rgba(244, 160, 44, 0.4);
-  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  /* Shadows — soft navy-tinted, never harsh glow */
+  --shadow-xs: 0 1px 2px rgba(0, 20, 60, 0.05);
+  --shadow-sm: 0 2px 6px rgba(0, 20, 60, 0.06), 0 1px 2px rgba(0, 20, 60, 0.04);
+  --shadow-md: 0 8px 20px -6px rgba(0, 20, 60, 0.10), 0 2px 6px rgba(0, 20, 60, 0.05);
+  --shadow-lg: 0 18px 40px -12px rgba(0, 20, 60, 0.14), 0 4px 10px rgba(0, 20, 60, 0.06);
+  --shadow-glow: 0 0 0 1px var(--color-amber), 0 6px 18px -4px rgba(248, 184, 64, 0.22);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.65);
 
   /* Motion */
   --motion-fast: 120ms;
   --motion-base: 200ms;
   --motion-slow: 320ms;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1); /* smooth, no bounce */
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @layer base {
@@ -104,16 +121,22 @@
     text-rendering: optimizeLegibility;
   }
 
+  html {
+    scroll-padding-top: 5.5rem;
+  }
+
   body {
+    background-color: var(--color-bg);
     background-image:
-      radial-gradient(at 20% 0%, rgba(244, 160, 44, 0.06) 0px, transparent 50%),
-      radial-gradient(at 80% 100%, rgba(11, 18, 32, 0.4) 0px, transparent 50%);
+      radial-gradient(at 12% 0%, rgba(80, 90, 230, 0.05) 0px, transparent 46%),
+      radial-gradient(at 88% 100%, rgba(248, 184, 64, 0.04) 0px, transparent 48%),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
     background-attachment: fixed;
   }
 
   * { border-color: var(--color-rule); }
 
-  ::selection { background: var(--color-accent); color: var(--color-bg); }
+  ::selection { background: var(--color-amber); color: var(--color-navy); }
 
   ::-webkit-scrollbar { width: 10px; height: 10px; }
   ::-webkit-scrollbar-track { background: transparent; }
@@ -132,42 +155,44 @@
   .border-rule { border-color: var(--color-rule); }
   .border-rule-light { border-color: var(--color-rule-light); }
   .border-hairline { border-color: var(--color-rule); }
-  .border-amber { border-color: var(--color-accent); }
+  .border-amber { border-color: var(--color-amber); }
   .text-fg-muted { color: var(--color-fg-muted); }
   .text-fg-faint { color: var(--color-fg-faint); }
-  .text-accent { color: var(--color-accent); }
-  .text-navy { color: var(--color-bg); }
+  .text-accent { color: var(--color-amber); }
+  .text-sleep { color: var(--color-sleep); }
+  .text-navy { color: var(--color-navy); }
   .text-ink { color: var(--color-fg); }
   .text-ink-2 { color: var(--color-fg-muted); }
   .text-ink-3 { color: var(--color-fg-faint); }
-  .text-paper { color: var(--color-fg); }
+  .text-paper { color: var(--color-night-fg); }
+  .text-amber { color: var(--color-amber); }
 
   .bg-bg { background-color: var(--color-bg); }
   .bg-bg-raised { background-color: var(--color-bg-raised); }
   .bg-bg-hover { background-color: var(--color-bg-hover); }
   .bg-bg-sunken { background-color: var(--color-bg-sunken); }
-  .bg-accent { background-color: var(--color-accent); }
+  .bg-amber { background-color: var(--color-amber); }
   .bg-accent-soft { background-color: var(--color-accent-soft); }
+  .bg-sleep { background-color: var(--color-sleep); }
+  .bg-sleep-soft { background-color: var(--color-sleep-soft); }
   .bg-paper { background-color: var(--color-bg-raised); }
   .bg-paper-2 { background-color: var(--color-bg-hover); }
+  .bg-navy { background-color: var(--color-navy); }
+  .bg-night { background-color: var(--color-night); }
 
   .font-serif { font-family: var(--font-serif); }
   .font-sans { font-family: var(--font-sans); }
   .font-mono { font-family: var(--font-mono); }
 
-  /* Hairline — used for editorial rules + dividers */
   .hairline { box-shadow: inset 0 -1px 0 var(--color-rule); }
 
-  /* Glow — used sparingly on key CTAs */
+  /* Glow — CTAs only, never hover spam */
   .glow-accent { box-shadow: var(--shadow-glow); }
 
-  /* Tabular numbers for stats */
   .tabular-nums { font-variant-numeric: tabular-nums; }
 
-  /* Selection ring (focus ring) */
-  .ring-accent { box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent); }
+  .ring-accent { box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-amber); }
 
-  /* Skeleton — used for loading states */
   .skeleton {
     background: linear-gradient(
       90deg,
@@ -184,22 +209,82 @@
     100% { background-position: -200% 0; }
   }
 
-  /* Breathing dot — used on live-status indicators */
   .breathing-dot { animation: breathe 2.4s ease-in-out infinite; }
   @keyframes breathe {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.45; }
   }
 
-  /* Smooth focus transitions globally */
   a, button, [role="button"] {
     transition: color var(--motion-fast) var(--ease-out-expo),
                 background-color var(--motion-fast) var(--ease-out-expo),
-                border-color var(--motion-fast) var(--ease-out-expo);
+                border-color var(--motion-fast) var(--ease-out-expo),
+                transform var(--motion-base) var(--ease-out-expo),
+                box-shadow var(--motion-base) var(--ease-out-expo);
+  }
+
+  /* CTA micro-press — Framer-like, not bounce */
+  .cta-press {
+    transition: transform var(--motion-base) var(--ease-out-expo),
+                box-shadow var(--motion-base) var(--ease-out-expo),
+                background-color var(--motion-fast) var(--ease-out-expo),
+                border-color var(--motion-fast) var(--ease-out-expo),
+                color var(--motion-fast) var(--ease-out-expo);
+  }
+  .cta-press:hover {
+    transform: translateY(-1px) scale(1.015);
+  }
+  .cta-press:active {
+    transform: translateY(0) scale(0.985);
+  }
+
+  /* Path row — sleep accent line + arrow reveal */
+  .path-row {
+    position: relative;
+  }
+  .path-row::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--color-sleep);
+    transform: scaleY(0);
+    transform-origin: center;
+    transition: transform var(--motion-slow) var(--ease-out-expo);
+    opacity: 0.85;
+  }
+  .path-row:hover::before,
+  .path-row:focus-visible::before {
+    transform: scaleY(1);
+  }
+  .path-row:hover .path-arrow,
+  .path-row:focus-visible .path-arrow {
+    opacity: 1;
+    color: var(--color-sleep);
+    transform: translateX(2px);
+  }
+  .path-arrow {
+    opacity: 0;
+    transition: opacity var(--motion-base) var(--ease-out-expo),
+                transform var(--motion-base) var(--ease-out-expo),
+                color var(--motion-base) var(--ease-out-expo);
   }
 }
 
-/* Respect users who prefer no motion */
+/* Brand intro overlay — lock scroll while PageLoader is up */
+html.msl-intro-active,
+html.msl-intro-active body {
+  overflow: hidden;
+}
+
+/* Session already saw intro — hide loader before React hydrates */
+html.msl-intro-skip [data-msl-loader] {
+  display: none !important;
+  pointer-events: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -207,12 +292,20 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  .cta-press:hover,
+  .cta-press:active {
+    transform: none;
+  }
+  .path-row::before {
+    transform: none;
+    opacity: 0;
+  }
 }
 
 /* =========================================================================
- * shadcn primitive bridge — maps shadcn tokens to Lab Notebook tokens.
- * Existing utilities (text-accent, bg-bg-raised, etc.) are unaffected.
- * Uses shadcn v4 canonical form: :root vars + @theme inline mapping.
+ * shadcn primitive bridge — maps to light paper brand tokens.
+ * Uses shadcn v4 form: :root vars + @theme inline mapping for utilities
+ * like bg-background / text-foreground / border-border.
  * ========================================================================= */
 
 @layer base {
@@ -224,33 +317,33 @@
     --card-foreground: var(--color-fg);
     --popover: var(--color-bg-raised);
     --popover-foreground: var(--color-fg);
-    --primary: var(--color-accent);
-    --primary-foreground: var(--color-bg);
+    --primary: var(--color-amber);
+    --primary-foreground: var(--color-navy);
     --secondary: var(--color-bg-hover);
     --secondary-foreground: var(--color-fg);
     --muted: var(--color-bg-sunken);
     --muted-foreground: var(--color-fg-muted);
-    --accent: var(--color-accent-soft);
-    --accent-foreground: var(--color-fg);
+    --accent: var(--color-sleep-soft);
+    --accent-foreground: var(--color-navy);
     --destructive: var(--color-signal-red);
-    --destructive-foreground: var(--color-fg);
+    --destructive-foreground: #FFFFFF;
     --border: var(--color-rule);
     --input: var(--color-rule);
-    --ring: var(--color-accent);
+    --ring: var(--color-sleep);
 
     --sidebar: var(--color-bg-raised);
     --sidebar-foreground: var(--color-fg);
-    --sidebar-primary: var(--color-accent);
-    --sidebar-primary-foreground: var(--color-bg);
+    --sidebar-primary: var(--color-navy);
+    --sidebar-primary-foreground: var(--color-night-fg);
     --sidebar-accent: var(--color-bg-hover);
     --sidebar-accent-foreground: var(--color-fg);
     --sidebar-border: var(--color-rule);
-    --sidebar-ring: var(--color-accent);
+    --sidebar-ring: var(--color-sleep);
 
-    --chart-1: var(--color-accent);
-    --chart-2: var(--color-signal-green);
-    --chart-3: var(--color-signal-amber);
-    --chart-4: var(--color-signal-success);
+    --chart-1: var(--color-sleep);
+    --chart-2: var(--color-amber);
+    --chart-3: var(--color-navy);
+    --chart-4: var(--color-signal-green);
     --chart-5: var(--color-signal-red);
   }
 
@@ -262,4 +355,37 @@
     background-color: var(--background);
     color: var(--foreground);
   }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
 }

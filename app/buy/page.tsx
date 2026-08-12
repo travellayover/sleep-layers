@@ -9,10 +9,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
+import { SceneFrame } from "@/components/public/scene-frame";
 import { toast } from "sonner";
 
 // Type stub: the source of truth for product data lives in
@@ -98,45 +98,52 @@ export default function BuyPage() {
       }
       toast.success("Order created. Redirecting…");
       router.push(data.redirectUrl);
-    } catch (err) {
+    } catch {
       setError("Network error. Please try again.");
       setSubmitting(false);
     }
   }
 
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 lg:px-8 lg:py-20">
-      <Badge variant="secondary" className="bg-accent/10 font-mono text-[10px] uppercase tracking-[0.18em] text-accent-foreground">
+    <article className="mx-auto max-w-3xl px-4 py-16 lg:px-8 lg:py-24">
+      <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-sleep">
         The 7-Day Sleep Reset
-      </Badge>
+      </p>
       <h1 className="mt-4 font-serif text-4xl font-medium leading-tight tracking-tight text-foreground md:text-5xl">
         One action per night. Ten minutes max. No supplements required.
       </h1>
-      <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
+      <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">
         A PDF that turns what would otherwise be another list of sleep tips into
-        a sequence. One small setup decision each evening, with a tracker
-        and a 12-question bedroom audit you can keep using.
+        a sequence. One small setup decision each evening, with a tracker and a
+        12-question bedroom audit you can keep using.
       </p>
 
-      <div className="mt-10 grid gap-4 rounded-2xl border border-primary bg-card p-8">
-        <div className="flex items-baseline justify-between">
+      <SceneFrame
+        className="mt-10"
+        scene="A printed checklist sits beside a warm lamp — Night 1 circled."
+        environment="Paper programme · bedside · one clear next step"
+        tone="day"
+      />
+
+      <div className="mt-12 rounded-2xl border border-border bg-card p-7 md:p-8">
+        <div className="flex items-baseline justify-between gap-4">
           <h2 className="font-serif text-xl font-medium text-foreground">
             Today&apos;s price
           </h2>
-          <span className="text-[10px] font-semibold uppercase tracking-wider text-accent">
+          <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-sleep">
             Launch
           </span>
         </div>
-        <p className="font-serif text-5xl font-medium tracking-tight text-foreground">
+        <p className="mt-4 font-serif text-5xl font-medium tracking-tight text-foreground">
           $9
           <span className="ml-2 text-base font-normal text-muted-foreground">
             (was $19 after launch)
           </span>
         </p>
-        <p className="text-[13px] leading-relaxed text-muted-foreground">
+        <p className="mt-3 text-[13px] leading-relaxed text-muted-foreground">
           Instant PDF download. Email delivery optional — works for any reader.
         </p>
-        <Separator className="my-2 bg-border" />
+        <Separator className="my-5 bg-border" />
         <form
           onSubmit={onSubmit}
           className="flex flex-col gap-3 sm:flex-row sm:items-center"
@@ -156,27 +163,21 @@ export default function BuyPage() {
             type="submit"
             size="lg"
             disabled={submitting}
-            className="rounded-full px-6"
+            className="rounded-full bg-primary px-6 text-primary-foreground hover:bg-primary/90"
           >
             {submitting ? "Starting checkout…" : "Buy for $9"}
           </Button>
         </form>
         {error ? (
-          <p className="text-[12px] text-destructive-foreground" role="alert">
+          <p className="mt-3 text-[12px] text-destructive-foreground" role="alert">
             {error}
           </p>
         ) : null}
-        <p className="text-[11px] text-muted-foreground">
+        <p className="mt-4 text-[11px] leading-relaxed text-muted-foreground">
           This preview repo does not yet wire a real payment provider — the
           button mints a no-charge order and routes you to a faux checkout
-          success page so you can see the full flow. Tier 3 of{" "}
-          <Link
-            href="/"
-            className="underline decoration-primary underline-offset-2 hover:text-primary"
-          >
-            STATUS.md
-          </Link>{" "}
-          swaps the stub for Stripe.
+          success page so you can see the full flow. Tier 3 of STATUS.md swaps
+          the stub for Stripe.
         </p>
       </div>
 
@@ -186,8 +187,13 @@ export default function BuyPage() {
         </h2>
         <ul className="mt-5 space-y-3">
           {FEATURES.map((f) => (
-            <li key={f} className="flex gap-3 text-[15px] leading-relaxed text-muted-foreground">
-              <span className="font-serif text-accent">·</span>
+            <li
+              key={f}
+              className="flex gap-3 text-[15px] leading-relaxed text-muted-foreground"
+            >
+              <span className="font-serif text-accent" aria-hidden>
+                ·
+              </span>
               <span>{f}</span>
             </li>
           ))}
@@ -201,7 +207,7 @@ export default function BuyPage() {
         <Accordion type="single" collapsible className="mt-5 w-full">
           {FAQ.map((item, i) => (
             <AccordionItem key={i} value={`q-${i}`}>
-              <AccordionTrigger className="text-[15px] text-foreground hover:text-primary">
+              <AccordionTrigger className="text-[15px] text-foreground hover:text-sleep">
                 {item.q}
               </AccordionTrigger>
               <AccordionContent className="text-[14px] leading-relaxed text-muted-foreground">
@@ -212,27 +218,36 @@ export default function BuyPage() {
         </Accordion>
       </section>
 
-      <section className="mt-16 rounded-2xl border border-border bg-card p-8">
-        <h2 className="text-[11px] font-semibold uppercase tracking-wider text-primary">
+      <section className="mt-16 rounded-2xl border border-border bg-paper-2 p-7">
+        <h2 className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-sleep">
           Disclaimer
         </h2>
         <p className="mt-3 text-[13px] leading-relaxed text-muted-foreground">
           {DISCLAIMER} See our{" "}
           <Link
             href="/medical-disclaimer"
-            className="text-foreground underline decoration-primary underline-offset-2 hover:text-primary"
+            className="text-foreground underline decoration-sleep/40 underline-offset-2 hover:text-sleep"
           >
             Medical Disclaimer
           </Link>{" "}
           and{" "}
           <Link
             href="/editorial-method"
-            className="text-foreground underline decoration-primary underline-offset-2 hover:text-primary"
+            className="text-foreground underline decoration-sleep/40 underline-offset-2 hover:text-sleep"
           >
             Editorial Method
           </Link>
           .
         </p>
+      </section>
+
+      <section className="mt-14 text-center">
+        <Link
+          href="/seven-night-setup"
+          className="text-[13px] font-medium text-foreground underline decoration-sleep/40 decoration-1 underline-offset-4 hover:text-sleep"
+        >
+          Prefer the free 7-Night Setup first →
+        </Link>
       </section>
     </article>
   );

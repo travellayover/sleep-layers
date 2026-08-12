@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AudiencePathTemplate } from "@/components/public/audience-path-template";
 
 export const metadata: Metadata = {
-  title: "Shift & Caregiving — Sleep Layers",
+  title: "Shift & Caregiving — MySleepLabs",
   description:
     "A routine can stay consistent even when the clock keeps changing.",
 };

@@ -49,33 +49,31 @@ export function ProductLabIndex({
     return true;
   });
 
-  // collect unique use cases across the catalog
   const useCases = Array.from(
     new Set(products.flatMap((p) => p.useCase)),
   ).sort();
 
   return (
     <article className="mx-auto max-w-6xl px-4 py-16 lg:px-8 lg:py-24">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber">
+      <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-sleep">
         Product Lab
       </p>
-      <h1 className="mt-4 font-serif text-4xl font-medium leading-tight tracking-tight text-navy md:text-5xl">
+      <h1 className="mt-4 font-serif text-4xl font-medium leading-tight tracking-tight text-foreground md:text-5xl">
         Understand what a product does before deciding if it fits.
       </h1>
-      <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-ink-2">
-        A buyer's guide, not a store. Every entry lists the problem it is
+      <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
+        A buyer&apos;s guide, not a store. Every entry lists the problem it is
         designed to address, who it may fit, important specifications, comfort
         and usability notes, and limitations — before price.
       </p>
 
-      {/* Filters */}
-      <section className="mt-10 rounded-2xl border border-hairline bg-paper-2 p-5">
+      <section className="mt-10 rounded-2xl border border-border bg-card p-5">
         <div className="grid gap-4 md:grid-cols-4">
           <Filter label="Category">
             <select
               defaultValue={activeCategory}
               onChange={(e) => applyFilter("category", e.target.value)}
-              className="w-full rounded-md border border-hairline bg-paper px-3 py-2 text-[13px] text-ink focus:border-amber focus:outline-none"
+              className="w-full rounded-md border border-border bg-background px-3 py-2 text-[13px] text-foreground focus:border-sleep focus:outline-none"
             >
               <option value="">All categories</option>
               {categories.map((c) => (
@@ -90,7 +88,7 @@ export function ProductLabIndex({
             <select
               defaultValue={activeUseCase}
               onChange={(e) => applyFilter("useCase", e.target.value)}
-              className="w-full rounded-md border border-hairline bg-paper px-3 py-2 text-[13px] text-ink focus:border-amber focus:outline-none"
+              className="w-full rounded-md border border-border bg-background px-3 py-2 text-[13px] text-foreground focus:border-sleep focus:outline-none"
             >
               <option value="">All use cases</option>
               {useCases.map((u) => (
@@ -105,7 +103,7 @@ export function ProductLabIndex({
             <select
               defaultValue={activePrice}
               onChange={(e) => applyFilter("price", e.target.value)}
-              className="w-full rounded-md border border-hairline bg-paper px-3 py-2 text-[13px] text-ink focus:border-amber focus:outline-none"
+              className="w-full rounded-md border border-border bg-background px-3 py-2 text-[13px] text-foreground focus:border-sleep focus:outline-none"
             >
               <option value="">All prices</option>
               {priceRanges.map((p) => (
@@ -120,7 +118,7 @@ export function ProductLabIndex({
             <select
               defaultValue={activeStatus}
               onChange={(e) => applyFilter("status", e.target.value)}
-              className="w-full rounded-md border border-hairline bg-paper px-3 py-2 text-[13px] text-ink focus:border-amber focus:outline-none"
+              className="w-full rounded-md border border-border bg-background px-3 py-2 text-[13px] text-foreground focus:border-sleep focus:outline-none"
             >
               <option value="">Any status</option>
               {researchStatuses.map((s) => (
@@ -131,7 +129,7 @@ export function ProductLabIndex({
             </select>
           </Filter>
         </div>
-        <p className="mt-4 text-[11px] text-ink-2">
+        <p className="mt-4 text-[11px] text-muted-foreground">
           {filtered.length} of {products.length} products match ·{" "}
           <button
             type="button"
@@ -142,50 +140,52 @@ export function ProductLabIndex({
               );
               window.location.href = url.toString();
             }}
-            className="text-amber underline decoration-amber underline-offset-2 hover:text-navy"
+            className="text-sleep underline decoration-sleep/40 underline-offset-2 hover:text-foreground"
           >
             Clear filters
           </button>
         </p>
       </section>
 
-      {/* Cards */}
       <section className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {filtered.map((p) => (
           <Link
             key={p.slug}
             href={`/product-lab/${p.slug}`}
-            className="group block rounded-2xl border border-hairline bg-paper p-6 transition-all hover:border-amber hover:shadow-[0_4px_24px_-12px_rgba(244,160,44,0.25)]"
+            className="group block rounded-2xl border border-border bg-card p-6 transition-colors duration-200 hover:border-sleep/40"
           >
             <div className="flex items-center justify-between">
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-amber">
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-sleep">
                 {p.category}
               </span>
               <ResearchStatusBadge status={p.researchStatus} />
             </div>
-            <h2 className="mt-3 font-serif text-lg font-medium leading-snug text-navy">
+            <h2 className="mt-3 font-serif text-lg font-medium leading-snug text-foreground">
               {p.name}
             </h2>
-            <p className="mt-2 text-[13px] leading-relaxed text-ink-2">
+            <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
               {p.oneLine}
             </p>
-            <p className="mt-4 text-[12px] font-medium text-ink-3">
+            <p className="mt-4 text-[12px] font-medium text-muted-foreground/80">
               {p.priceRange} · {p.useCase[0]}
+            </p>
+            <p className="mt-3 text-[12px] font-medium text-sleep transition-colors group-hover:text-sleep-hover">
+              Open review →
             </p>
           </Link>
         ))}
       </section>
 
       {filtered.length === 0 && (
-        <p className="mt-10 text-center text-[13px] text-ink-2">
+        <p className="mt-10 text-center text-[13px] text-muted-foreground">
           No products match those filters. Try clearing one.
         </p>
       )}
 
-      <p className="mt-12 text-center text-[12px] text-ink-2">
+      <p className="mt-12 text-center text-[12px] text-muted-foreground">
         <Link
           href="/affiliate-disclosure"
-          className="underline decoration-amber underline-offset-2 hover:text-navy"
+          className="underline decoration-sleep/40 underline-offset-2 hover:text-sleep"
         >
           How we label and disclose affiliate relationships →
         </Link>
@@ -197,7 +197,7 @@ export function ProductLabIndex({
 function Filter({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block">
-      <span className="text-[10px] font-semibold uppercase tracking-wider text-ink-2">
+      <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
         {label}
       </span>
       <div className="mt-1">{children}</div>
@@ -208,12 +208,12 @@ function Filter({ label, children }: { label: string; children: React.ReactNode 
 function ResearchStatusBadge({ status }: { status: ResearchStatus }) {
   const colour =
     status === "Not independently tested"
-      ? "bg-paper text-ink-3 border-hairline"
+      ? "bg-background text-muted-foreground border-border"
       : status === "Editorial comparison"
-        ? "bg-amber/10 text-amber border-amber/40"
+        ? "bg-accent-soft text-foreground border-accent/40"
         : status === "Specification checked"
-          ? "bg-navy/5 text-navy border-navy/20"
-          : "bg-paper-2 text-ink-2 border-hairline";
+          ? "bg-sleep-soft text-sleep border-sleep/25"
+          : "bg-paper-2 text-muted-foreground border-border";
   return (
     <span
       className={`rounded-full border px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider ${colour}`}

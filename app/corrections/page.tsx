@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import { PolicyPage } from "@/components/public/policy-page";
 
 export const metadata: Metadata = {
-  title: "Corrections Policy — Sleep Layers",
+  title: "Corrections Policy — MySleepLabs",
   description:
-    "How Sleep Layers handles errors, fabrications, and outdated claims.",
+    "How MySleepLabs handles errors, fabrications, and outdated claims.",
 };
 
 export default function CorrectionsPage() {
   return (
     <PolicyPage
       title="Corrections Policy"
-      description="How Sleep Layers handles errors, fabrications, and outdated claims."
+      description="How MySleepLabs handles errors, fabrications, and outdated claims."
       intro="If a guide or product review is wrong, we publish a correction with a date. Corrections are not silent edits."
       sections={[
         {

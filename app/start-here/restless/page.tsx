@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AudiencePathTemplate } from "@/components/public/audience-path-template";
 
 export const metadata: Metadata = {
-  title: "Restless or Unrefreshed — Sleep Layers",
+  title: "Restless or Unrefreshed — MySleepLabs",
   description:
     "Start by noticing patterns before buying another solution.",
 };

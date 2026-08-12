@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AudiencePathTemplate } from "@/components/public/audience-path-template";
 
 export const metadata: Metadata = {
-  title: "Busy Minds — Sleep Layers",
+  title: "Busy Minds — MySleepLabs",
   description:
     "Work follows you home. Build a clear stopping point so your evening actually ends.",
 };

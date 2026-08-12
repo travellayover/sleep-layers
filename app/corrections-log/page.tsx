@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Corrections Log — Sleep Layers",
+  title: "Corrections Log — MySleepLabs",
   description:
-    "A running log of corrections to Sleep Layers guides and product reviews.",
+    "A running log of corrections to MySleepLabs guides and product reviews.",
 };
 
 type Correction = {
@@ -41,7 +41,7 @@ export default async function CorrectionsLogPage() {
         Every correction, public.
       </h1>
       <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">
-        When a Sleep Layers guide, product review, or editorial claim is
+        When a MySleepLabs guide, product review, or editorial claim is
         updated after publication, we add an entry here. The aim is to be
         fast, specific, and easy to read.
       </p>

@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import { PolicyPage } from "@/components/public/policy-page";
 
 export const metadata: Metadata = {
-  title: "Editorial Method — Sleep Layers",
+  title: "Editorial Method — MySleepLabs",
   description:
-    "How Sleep Layers researches, reviews, and corrects its work.",
+    "How MySleepLabs researches, reviews, and corrects its work.",
 };
 
 export default function EditorialMethodPage() {
   return (
     <PolicyPage
       title="Editorial Method"
-      description="How Sleep Layers researches, reviews, and corrects its work."
+      description="How MySleepLabs researches, reviews, and corrects its work."
       intro="Our editorial method exists because sleep advice is full of confident claims and missing citations. Here is the process every guide goes through before it ships."
       sections={[
         {

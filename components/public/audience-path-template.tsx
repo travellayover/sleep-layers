@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import { SceneFrame } from "@/components/public/scene-frame";
 
 type PathProps = {
   title: string;
@@ -26,7 +27,10 @@ export function AudiencePathTemplate({
 }: PathProps) {
   return (
     <article className="mx-auto max-w-3xl px-4 py-16 lg:px-8 lg:py-24">
-      <Badge variant="secondary" className="bg-accent/10 font-mono text-[10px] uppercase tracking-[0.18em] text-accent-foreground">
+      <Badge
+        variant="secondary"
+        className="bg-sleep-soft font-mono text-[10px] uppercase tracking-[0.18em] text-sleep"
+      >
         Path · {internalLabel}
       </Badge>
       <h1 className="mt-4 font-serif text-4xl font-medium leading-tight tracking-tight text-foreground md:text-5xl">
@@ -34,16 +38,7 @@ export function AudiencePathTemplate({
       </h1>
 
       <section className="mt-12">
-        <div
-          className="flex aspect-[16/10] items-center justify-center rounded-2xl border border-dashed border-border bg-card text-center text-[12px] text-muted-foreground"
-          role="img"
-          aria-label={`Loftie-style 3D illustration: ${scene}`}
-        >
-          <div className="px-4">{scene}</div>
-        </div>
-        <p className="mt-3 text-center text-[11px] text-muted-foreground/70">
-          Loftie-style editorial 3D illustration — coming soon
-        </p>
+        <SceneFrame scene={scene} environment={environment} tone="day" />
       </section>
 
       <section className="mt-12 space-y-6">
@@ -58,38 +53,38 @@ export function AudiencePathTemplate({
         </h2>
         <ul className="mt-5 space-y-4 text-[14px] leading-relaxed text-muted-foreground">
           <li className="flex gap-3">
-            <span className="font-serif text-primary">·</span>
+            <span className="font-serif text-accent">·</span>
             <div>
               <strong className="font-medium text-foreground">Starter guide:</strong>{" "}
               <Link
                 href={starterGuide.href}
-                className="underline decoration-primary underline-offset-2 hover:text-primary"
+                className="underline decoration-sleep/40 underline-offset-2 hover:text-sleep"
               >
                 {starterGuide.title}
               </Link>
             </div>
           </li>
           <li className="flex gap-3">
-            <span className="font-serif text-primary">·</span>
+            <span className="font-serif text-accent">·</span>
             <div>
               <strong className="font-medium text-foreground">Practical action:</strong>{" "}
               {practicalAction}
             </div>
           </li>
           <li className="flex gap-3">
-            <span className="font-serif text-primary">·</span>
+            <span className="font-serif text-accent">·</span>
             <div>
               <strong className="font-medium text-foreground">Seven-Night Setup entry:</strong>{" "}
               <Link
                 href="/seven-night-setup"
-                className="underline decoration-primary underline-offset-2 hover:text-primary"
+                className="underline decoration-sleep/40 underline-offset-2 hover:text-sleep"
               >
                 Begin with Night 1
               </Link>
             </div>
           </li>
           <li className="flex gap-3">
-            <span className="font-serif text-primary">·</span>
+            <span className="font-serif text-accent">·</span>
             <div>
               <strong className="font-medium text-foreground">Email path:</strong>{" "}
               {emailPath}
@@ -99,7 +94,7 @@ export function AudiencePathTemplate({
       </section>
 
       <p className="mt-12 text-center text-[12px] text-muted-foreground">
-        <Link href="/start-here" className="hover:text-foreground">
+        <Link href="/start-here" className="hover:text-sleep">
           ← Back to Start Here
         </Link>
       </p>
@@ -110,7 +105,7 @@ export function AudiencePathTemplate({
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <h3 className="text-[11px] font-semibold uppercase tracking-wider text-primary">
+      <h3 className="text-[11px] font-semibold uppercase tracking-wider text-sleep">
         {label}
       </h3>
       <p className="mt-2 font-serif text-lg leading-snug text-foreground">{children}</p>

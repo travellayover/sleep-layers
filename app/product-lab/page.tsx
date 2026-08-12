@@ -9,7 +9,7 @@ import {
 } from "@/lib/products/content";
 
 export const metadata: Metadata = {
-  title: "Product Lab — Sleep Layers",
+  title: "Product Lab — MySleepLabs",
   description:
     "Understand what a product does before deciding if it fits your life.",
 };

@@ -27,9 +27,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const guide = findGuideBySlug(slug);
-  if (!guide) return { title: "Guide not found — Sleep Layers" };
+  if (!guide) return { title: "Guide not found — MySleepLabs" };
   return {
-    title: `${guide.title} — Sleep Layers`,
+    title: `${guide.title} — MySleepLabs`,
     description: guide.twoSentenceAnswer,
   };
 }
@@ -57,7 +57,10 @@ export default async function GuidePage({ params }: Props) {
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-16 lg:px-8 lg:py-24">
-      <Badge variant="secondary" className="bg-accent/10 font-mono text-[10px] uppercase tracking-[0.18em] text-accent-foreground">
+      <Badge
+        variant="secondary"
+        className="bg-sleep-soft font-mono text-[10px] uppercase tracking-[0.18em] text-sleep"
+      >
         Sleep Guide · {AUDIENCE_LABEL[guide.audience]}
       </Badge>
       <h1 className="mt-4 font-serif text-4xl font-medium leading-tight tracking-tight text-foreground md:text-5xl">
@@ -66,8 +69,8 @@ export default async function GuidePage({ params }: Props) {
       <p className="mt-2 text-[12px] text-muted-foreground">{guide.topic}</p>
 
       {/* Two-sentence answer */}
-      <section className="mt-10 rounded-2xl border border-primary bg-card p-6">
-        <h2 className="text-[11px] font-semibold uppercase tracking-wider text-primary">
+      <section className="mt-10 rounded-2xl border border-sleep/30 bg-card p-6">
+        <h2 className="text-[11px] font-semibold uppercase tracking-wider text-sleep">
           The short answer
         </h2>
         <p className="mt-3 font-serif text-lg leading-relaxed text-foreground">
@@ -93,7 +96,7 @@ export default async function GuidePage({ params }: Props) {
         <ol className="mt-4 space-y-3 text-[15px] leading-relaxed text-muted-foreground">
           {guide.whatToTryTonight.map((step, i) => (
             <li key={i} className="flex gap-4">
-              <span className="font-serif text-primary">
+              <span className="font-serif text-accent">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <span>{step}</span>
@@ -110,7 +113,7 @@ export default async function GuidePage({ params }: Props) {
         <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-muted-foreground">
           {guide.realLifeVariations.map((v, i) => (
             <li key={i} className="flex gap-3">
-              <span className="font-serif text-primary">·</span>
+              <span className="font-serif text-sleep">·</span>
               <span>{v}</span>
             </li>
           ))}
@@ -140,7 +143,7 @@ export default async function GuidePage({ params }: Props) {
         <Accordion type="single" collapsible className="mt-5 w-full">
           {GUIDE_FAQ(guide).map((faq, i) => (
             <AccordionItem key={i} value={`q-${i}`}>
-              <AccordionTrigger className="text-[15px] text-foreground hover:text-primary">
+              <AccordionTrigger className="text-[15px] text-foreground hover:text-sleep">
                 {faq.q}
               </AccordionTrigger>
               <AccordionContent className="text-[14px] leading-relaxed text-muted-foreground">
@@ -159,7 +162,7 @@ export default async function GuidePage({ params }: Props) {
         <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-muted-foreground">
           {guide.whenProfessionalSupport.map((p, i) => (
             <li key={i} className="flex gap-3">
-              <span className="font-serif text-primary">·</span>
+              <span className="font-serif text-sleep">·</span>
               <span>{p}</span>
             </li>
           ))}
@@ -168,7 +171,7 @@ export default async function GuidePage({ params }: Props) {
           See our{" "}
           <Link
             href="/medical-disclaimer"
-            className="underline decoration-primary underline-offset-2 hover:text-primary"
+            className="underline decoration-sleep/40 underline-offset-2 hover:text-sleep"
           >
             Medical Disclaimer
           </Link>
@@ -179,7 +182,7 @@ export default async function GuidePage({ params }: Props) {
       {/* Sources */}
       {citations.length === 0 && (
         <section className="mt-14 border-t border-border pt-10">
-          <h2 className="text-[11px] font-semibold uppercase tracking-wider text-primary">
+          <h2 className="text-[11px] font-semibold uppercase tracking-wider text-sleep">
             Sources
           </h2>
           <p className="mt-3 text-[13px] text-muted-foreground">
@@ -196,7 +199,7 @@ export default async function GuidePage({ params }: Props) {
       )}
       {citations.length > 0 && (
         <section className="mt-14 border-t border-border pt-10">
-          <h2 className="text-[11px] font-semibold uppercase tracking-wider text-primary">
+          <h2 className="text-[11px] font-semibold uppercase tracking-wider text-sleep">
             Sources
           </h2>
           <ol className="mt-5 space-y-5">
@@ -210,7 +213,7 @@ export default async function GuidePage({ params }: Props) {
                     href={c.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline decoration-primary underline-offset-2 hover:text-primary"
+                    className="underline decoration-sleep/40 underline-offset-2 hover:text-sleep"
                   >
                     View on PubMed
                   </a>
@@ -232,7 +235,7 @@ export default async function GuidePage({ params }: Props) {
               <li key={r.slug}>
                 <Link
                   href={`/guides/${r.slug}`}
-                  className="text-[14px] text-foreground underline decoration-primary underline-offset-2 hover:text-primary"
+                  className="text-[14px] text-foreground underline decoration-sleep/40 underline-offset-2 hover:text-sleep"
                 >
                   {r.title}
                 </Link>

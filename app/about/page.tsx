@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PolicyPage } from "@/components/public/policy-page";
 
 export const metadata: Metadata = {
-  title: "About MySleepLabs — Sleep Layers",
+  title: "About — MySleepLabs",
   description:
     "An independent sleep-education and product-discovery publication that uses AI to assist research and content creation.",
 };

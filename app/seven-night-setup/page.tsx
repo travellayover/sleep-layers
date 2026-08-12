@@ -1,8 +1,9 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { SceneFrame } from "@/components/public/scene-frame";
 
 export const metadata: Metadata = {
-  title: "The 7-Night Setup — Sleep Layers",
+  title: "The 7-Night Setup — MySleepLabs",
   description:
     "One small setup decision each evening. No mattress, no overhaul, no miracle routine.",
 };
@@ -55,59 +56,66 @@ const NIGHTS = [
 export default function SevenNightSetupPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-16 lg:px-8 lg:py-24">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber">
+      <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-sleep">
         The 7-Night Setup
       </p>
-      <h1 className="mt-4 font-serif text-4xl font-medium leading-tight tracking-tight text-navy md:text-5xl">
+      <h1 className="mt-4 font-serif text-4xl font-medium leading-tight tracking-tight text-foreground md:text-5xl">
         One small setup decision each evening.
       </h1>
-      <p className="mt-5 text-[15px] leading-relaxed text-ink-2">
+      <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">
         Seven evenings. Seven small changes to one corner of your bedroom. No
         mattress, no overhaul, no miracle routine. After night seven, look back
         at your notes — that is what your next month should be built on.
       </p>
 
+      <SceneFrame
+        className="mt-10"
+        scene="A warm bedside lamp is moved six inches closer — one setup decision for tonight."
+        environment="Loftie-nightstand mood · ordinary room · one change"
+        tone="night"
+      />
+
       <section className="mt-14 space-y-6">
         {NIGHTS.map((night) => (
           <article
             key={night.n}
-            className="rounded-2xl border border-hairline bg-paper p-6 md:p-8"
+            className="rounded-2xl border border-border bg-card p-6 md:p-8"
           >
             <div className="flex items-baseline gap-4">
-              <span className="font-serif text-3xl font-medium text-amber">
+              <span className="font-serif text-3xl font-medium text-accent">
                 {String(night.n).padStart(2, "0")}
               </span>
               <div>
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-ink-2">
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
                   Night {night.n} · {night.theme}
                 </p>
-                <h2 className="mt-1 font-serif text-xl font-medium leading-snug text-navy md:text-2xl">
+                <h2 className="mt-1 font-serif text-xl font-medium leading-snug text-foreground md:text-2xl">
                   {night.title}
                 </h2>
               </div>
             </div>
-            <p className="mt-4 text-[14px] leading-relaxed text-ink-2">
+            <p className="mt-4 text-[14px] leading-relaxed text-muted-foreground">
               {night.body}
             </p>
           </article>
         ))}
       </section>
 
-      <section className="mt-16 rounded-2xl border border-hairline bg-paper-2 p-7">
-        <h2 className="font-serif text-2xl font-medium tracking-tight text-navy">
+      <section className="mt-16 rounded-2xl border border-border bg-paper-2 p-7">
+        <h2 className="font-serif text-2xl font-medium tracking-tight text-foreground">
           What this setup will not do.
         </h2>
-        <ul className="mt-4 space-y-2 text-[14px] text-ink-2">
+        <ul className="mt-4 space-y-2 text-[14px] text-muted-foreground">
           <li>· Diagnose a sleep disorder</li>
           <li>· Replace advice from a qualified clinician</li>
           <li>· Promise a specific amount of sleep</li>
           <li>· Make any single product necessary</li>
         </ul>
-        <p className="mt-5 text-[12px] text-ink-2">
+        <p className="mt-5 text-[12px] text-muted-foreground">
           See our{" "}
           <Link
             href="/medical-disclaimer"
-            className="underline decoration-amber underline-offset-2 hover:text-navy"
+            className="underline decoration-sleep/40 underline-offset-2 hover:text-sleep"
           >
             Medical Disclaimer
           </Link>
@@ -118,7 +126,7 @@ export default function SevenNightSetupPage() {
       <section className="mt-14 text-center">
         <Link
           href="/guides"
-          className="text-[13px] font-medium text-navy underline decoration-amber decoration-1 underline-offset-4 hover:text-amber"
+          className="text-[13px] font-medium text-foreground underline decoration-sleep/40 decoration-1 underline-offset-4 hover:text-sleep"
         >
           Continue to Sleep Guides →
         </Link>

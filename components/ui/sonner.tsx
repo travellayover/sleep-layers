@@ -10,12 +10,10 @@ import {
 import { Toaster as Sonner, type ToasterProps } from "sonner"
 
 const Toaster = ({ ...props }: ToasterProps) => {
-  // Standalone public preview: no theme switcher, hardcoded to "dark"
-  // (the Lab Notebook design system is dark-only). Matches the project's
-  // --color-bg (#0B1220) tonality.
+  // Public site is light paper; toasts follow that surface.
   return (
     <Sonner
-      theme="dark"
+      theme="light"
       className="toaster group"
       icons={{
         success: <CircleCheckIcon className="size-4" />,

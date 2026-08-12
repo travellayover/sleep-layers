@@ -56,7 +56,7 @@ export function SiteSearch({ items }: { items: IndexItem[] }) {
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder="blue light, mattress, shift work, kids…"
-          aria-label="Search Sleep Layers"
+          aria-label="Search MySleepLabs"
           className="h-12 rounded-full border-border bg-card px-5 text-[15px] text-foreground placeholder:text-muted-foreground focus-visible:ring-ring"
         />
         <p className="mt-3 text-[12px] text-muted-foreground">

@@ -2,17 +2,17 @@ import type { Metadata } from "next";
 import { PolicyPage } from "@/components/public/policy-page";
 
 export const metadata: Metadata = {
-  title: "Medical Disclaimer — Sleep Layers",
+  title: "Medical Disclaimer — MySleepLabs",
   description:
-    "Sleep Layers is an educational publication and does not provide medical advice.",
+    "MySleepLabs is an educational publication and does not provide medical advice.",
 };
 
 export default function MedicalDisclaimerPage() {
   return (
     <PolicyPage
       title="Medical Disclaimer"
-      description="Sleep Layers is an educational publication. It is not medical care."
-      intro="Sleep Layers publishes educational sleep content. Nothing on this site is medical advice, diagnosis, or treatment, and nothing here should be used as a substitute for professional medical care."
+      description="MySleepLabs is an educational publication. It is not medical care."
+      intro="MySleepLabs publishes educational sleep content. Nothing on this site is medical advice, diagnosis, or treatment, and nothing here should be used as a substitute for professional medical care."
       sections={[
         {
           heading: "What this site is",

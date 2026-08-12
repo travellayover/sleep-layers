@@ -4,8 +4,8 @@ import { GUIDES } from "@/lib/guides/content";
 import { PRODUCTS } from "@/lib/products/content";
 
 export const metadata: Metadata = {
-  title: "Search — Sleep Layers",
-  description: "Search Sleep Layers guides, products, and audience paths.",
+  title: "Search — MySleepLabs",
+  description: "Search MySleepLabs guides, products, and audience paths.",
 };
 
 const PATHS = [

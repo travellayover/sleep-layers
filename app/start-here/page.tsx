@@ -1,10 +1,11 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { SceneFrame } from "@/components/public/scene-frame";
 
 export const metadata: Metadata = {
-  title: "Start Here — Sleep Layers",
+  title: "Start Here — MySleepLabs",
   description:
-    "A four-question router that picks the Sleep Layers path closest to your situation.",
+    "A four-question router that picks the MySleepLabs path closest to your situation.",
 };
 
 const PATHS = [
@@ -40,72 +41,85 @@ const QUESTIONS = [
 export default function StartHerePage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-16 lg:px-8 lg:py-24">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber">
+      <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-sleep">
         Start Here
       </p>
-      <h1 className="mt-4 font-serif text-4xl font-medium leading-tight tracking-tight text-navy md:text-5xl">
+      <h1 className="mt-4 font-serif text-4xl font-medium leading-[1.1] tracking-tight text-foreground md:text-5xl">
         Four short questions. No diagnosis.
       </h1>
-      <p className="mt-5 text-[15px] leading-relaxed text-ink-2">
-        This is a lifestyle router, not a clinical assessment. Answer for
-        yourself (not for a clinician). At the end, we will point you to the
-        Sleep Layers path closest to your situation.
+      <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-muted-foreground">
+        A lifestyle router for real evenings — not a clinical assessment. Answer
+        for yourself. We will point you to the path closest to your situation.
       </p>
 
-      <section className="mt-12 space-y-4">
+      <SceneFrame
+        className="mt-10"
+        scene="Sit on the edge of the bed. Choose one evening path — not a label."
+        environment="Ordinary home · calm decision · no clinical framing"
+        tone="day"
+        caption={null}
+      />
+
+      <section className="mt-12 space-y-3">
         {QUESTIONS.map((q, i) => (
-          <div key={i} className="rounded-xl border border-hairline bg-paper p-5">
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-amber">
+          <div
+            key={i}
+            className="border-b border-border py-5 first:border-t"
+          >
+            <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-sleep">
               Question {String(i + 1).padStart(2, "0")}
             </p>
-            <p className="mt-2 font-serif text-lg text-navy">{q}</p>
-            <p className="mt-2 text-[12px] text-ink-2">
-              Short-form answer coming soon. For now, jump straight to the path
-              that fits your answer:
+            <p className="mt-2 font-serif text-lg text-foreground">{q}</p>
+            <p className="mt-2 text-[12px] text-muted-foreground">
+              Short-form answers coming soon — for now, jump to the path that
+              fits:
             </p>
           </div>
         ))}
       </section>
 
       <section id="paths" className="mt-16">
-        <h2 className="font-serif text-2xl font-medium tracking-tight text-navy md:text-3xl">
+        <h2 className="font-serif text-2xl font-medium tracking-tight text-foreground md:text-3xl">
           Or pick a path directly.
         </h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
+        <ul className="mt-6 divide-y divide-border border-y border-border">
           {PATHS.map((p) => (
-            <Link
-              key={p.href}
-              href={p.href}
-              className="block rounded-xl border border-hairline bg-paper p-5 transition-all hover:border-amber"
-            >
-              <h3 className="font-serif text-lg font-medium text-navy">
-                {p.title}
-              </h3>
-              <p className="mt-2 text-[13px] leading-relaxed text-ink-2">
-                {p.body}
-              </p>
-            </Link>
+            <li key={p.href}>
+              <Link href={p.href} className="path-row group flex gap-4 py-5 pl-3 sm:pl-4">
+                <span className="min-w-0 flex-1">
+                  <span className="block font-serif text-lg font-medium text-foreground transition-colors group-hover:text-sleep">
+                    {p.title}
+                  </span>
+                  <span className="mt-1 block text-[13px] leading-relaxed text-muted-foreground">
+                    {p.body}
+                  </span>
+                </span>
+                <span className="path-arrow shrink-0 pt-1" aria-hidden="true">
+                  →
+                </span>
+              </Link>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
-      <aside className="mt-16 rounded-xl border border-hairline bg-paper-2 p-6">
-        <h3 className="font-serif text-base font-medium text-navy">
+      <aside className="mt-16 rounded-xl border border-border bg-paper-2 p-6">
+        <h3 className="font-serif text-base font-medium text-foreground">
           This router will never tell you:
         </h3>
-        <ul className="mt-3 space-y-1 text-[13px] text-ink-2">
+        <ul className="mt-3 space-y-1 text-[13px] text-muted-foreground">
           <li>· That you have a sleep disorder</li>
           <li>· Your sleep age or clinical risk rating</li>
           <li>· A treatment recommendation</li>
           <li>· That any product will fix what you are experiencing</li>
         </ul>
-        <p className="mt-4 text-[12px] text-ink-2">
+        <p className="mt-4 text-[12px] text-muted-foreground">
           See our{" "}
-          <Link href="/medical-disclaimer" className="underline decoration-amber underline-offset-2 hover:text-navy">
+          <Link href="/medical-disclaimer" className="underline decoration-sleep/40 underline-offset-2 hover:text-sleep">
             Medical Disclaimer
           </Link>{" "}
           and{" "}
-          <Link href="/editorial-method" className="underline decoration-amber underline-offset-2 hover:text-navy">
+          <Link href="/editorial-method" className="underline decoration-sleep/40 underline-offset-2 hover:text-sleep">
             Editorial Method
           </Link>
           .

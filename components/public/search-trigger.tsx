@@ -31,7 +31,7 @@ export function SearchTrigger({ items }: { items: IndexItem[] }) {
       <CommandInput placeholder="Search guides, products, paths…" />
       <CommandList>
         <CommandEmpty>No matches. Try a broader term.</CommandEmpty>
-        <CommandGroup heading="Sleep Layers index">
+        <CommandGroup heading="MySleepLabs index">
           {items.map((item) => (
             <CommandItem
               key={item.href}

@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import { PolicyPage } from "@/components/public/policy-page";
 
 export const metadata: Metadata = {
-  title: "Affiliate Disclosure — Sleep Layers",
-  description: "How Sleep Layers discloses affiliate relationships.",
+  title: "Affiliate Disclosure — MySleepLabs",
+  description: "How MySleepLabs discloses affiliate relationships.",
 };
 
 export default function AffiliateDisclosurePage() {
   return (
     <PolicyPage
       title="Affiliate Disclosure"
-      description="How Sleep Layers discloses affiliate relationships."
+      description="How MySleepLabs discloses affiliate relationships."
       intro="Some links in our guides and product reviews are affiliate links. If you buy through one of those links, we may earn a small commission at no cost to you. We disclose affiliate relationships on every page where they appear."
       sections={[
         {
