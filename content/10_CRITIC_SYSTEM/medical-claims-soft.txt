@@ -1,0 +1,14 @@
+# SOFT flag patterns — allowed ONLY in educational framing, but every match requires L2 human review. One regex per line.
+\binsomnia\b
+\bapnea\b
+\banxiety\b
+\bdepression\b
+\bADHD\b
+\btreatment\b
+\bmedical\b
+\bprescription\b
+\bsupplement\b
+\bmelatonin\b
+\btherapy\b
+\bdisorder\b
+\bdiagnos\w*

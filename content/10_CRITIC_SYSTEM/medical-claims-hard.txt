@@ -1,0 +1,25 @@
+# HARD medical claim patterns — engine hard-fails on any match. One regex per line.
+# Verified against Meta Health & Wellness + FTC posture (see research-findings.md §2).
+\bcures?\b
+\btreats?\b
+\bheals?\b
+\bprevents?\b
+\bpreventing\b
+\bremedy\b
+\bremedies\b
+\bmiracle\b
+\bdiagnos\w*
+\bguarantee\w*
+\b100%\s*(effective|guaranteed|safe|works)\b
+\bclinically\s*proven\b
+\bclinically\s*(tested|validated|shown|approved|backed)\b
+\bmedically\s*(proven|tested|validated|shown|approved|backed)\b
+\bdoctor[\s-]?(recommended|approved|says|prescribes)\b
+\bphysician[\s-]?(recommended|approved|says|prescribes)\b
+\bpeer[\s-]?reviewed\b
+\bbacked\s+by\s+(science|research|studies)\b
+\bFDA[\s-]?(approved|cleared)\b
+\bscientifically\s*proven\b
+\bpermanently\s*cures?\b
+\bfixes\s*(your|my|the)\s*(insomnia|sleep|apnea)\b
+\b(insomnia|sleep\s*apnea|restless\s*leg)\s+(cure|treatment|remedy)\b

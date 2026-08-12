@@ -56,6 +56,12 @@ if [ ! -d node_modules ]; then
 fi
 say_pass "node_modules present"
 
+# Pin the critic pattern root to this repo's content/ tree so the L0
+# harness loads the right patterns regardless of where CI runs.
+# (Locally the engine falls back to /Users/gm/mysleeplabs/, but on
+# CI runners that path does not exist.)
+export CONTENT_REPO_PATH="$ROOT/content"
+
 # Gate 1 — typecheck
 echo
 say_info "gate 1/3 — typecheck"

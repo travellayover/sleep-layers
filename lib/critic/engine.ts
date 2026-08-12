@@ -114,19 +114,51 @@ export type CriticPatterns = {
   banned: string[];
 };
 
-function loadLines(file: string): string[] {
+// Loader for pattern files. Two file conventions are recognized:
+//
+//   1. `medical-claims-hard.txt`, `medical-claims-soft.txt` — one regex per
+//      line. Lines starting with `#` are comments and dropped; blank lines
+//      are dropped. (Heading rows are also denoted with `#`. The first
+//      non-blank, non-comment lines after the heading are interpreted as
+//      patterns.)
+//
+//   2. `banned-hashtags.txt` — one literal hashtag per line. The tags
+//      THEMSELVES begin with `#`, which would normally trip the comment
+//      filter; the same file therefore accepts lines that begin with `!`
+//      as a literal-`#` escape. So the convention here is to write:
+//        # BANNED HASHTAGS
+//        !#follow4follow
+//        !#like4like
+//        ...
+//      The loader strips the leading `!` and re-inserts `#`. If a `#`
+//      row appears WITHOUT the `!`, it is still treated as a comment.
+//
+// This keeps the canonical case (one-regex-per-line, comment-with-#)
+// identical to the admin repo's engine while making the banned-hashtag
+// file's purpose explicit.
+
+function loadLines(file: string, mode: "regex" | "hashtag" = "regex"): string[] {
   if (!existsSync(file)) return [];
   return readFileSync(file, "utf8")
     .split(/\r?\n/)
     .map((l) => l.trim())
-    .filter((l) => l && !l.startsWith("#"));
+    .filter((l) => {
+      if (!l) return false;
+      if (l.startsWith("#")) return false; // comment
+      return true;
+    })
+    .map((l) =>
+      mode === "hashtag" && l.startsWith("!")
+        ? l.slice(1).trim()
+        : l,
+    );
 }
 
 export function loadPatterns(criticDir: string): CriticPatterns {
   return {
     hard: loadLines(path.join(criticDir, "medical-claims-hard.txt")).map((p) => new RegExp(p, "gi")),
     soft: loadLines(path.join(criticDir, "medical-claims-soft.txt")).map((p) => new RegExp(p, "gi")),
-    banned: loadLines(path.join(criticDir, "banned-hashtags.txt")),
+    banned: loadLines(path.join(criticDir, "banned-hashtags.txt"), "hashtag"),
   };
 }
 

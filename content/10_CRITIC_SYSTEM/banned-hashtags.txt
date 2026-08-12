@@ -1,0 +1,22 @@
+# Banned/engagement-bait hashtags — engine hard-fails captions containing these.
+# Conservative list: engagement-bait tags that suppress reach + risky wellness tags.
+# Re-verify live quarterly: if a tag's search page won't load, add it here.
+#
+# Convention: literal hashtag entries begin with `!` so the loader does
+# not mistake them for comments. The `!` is stripped before storage.
+!#follow4follow
+!#followforfollow
+!#like4like
+!#tag4likes
+!#f4f
+!#c4c
+!#s4s
+!#instagood
+!#instapromote
+!#instafollow
+!#sleepcure
+!#insomniacure
+!#weightloss
+!#detox
+!#fatburn
+!#miracle
