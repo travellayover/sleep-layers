@@ -63,19 +63,34 @@ A future cleanup is to extract these to a shared package. **Do not do that as a 
 | `npm run build` | Verifies the 24 routes prerender |
 | `npm run dev` | Local server at `:3000` |
 | `npx shadcn@latest add <name>` | Add a UI primitive. The repo's `components.json` is pre-configured. |
+| `bash scripts/ci.sh` | **Run all three CI gates locally** (typecheck + L0 negation harness + production build). Same script GitHub Actions uses in `.github/workflows/ci.yml`. |
 | `vercel deploy --yes` | Deploy. By default targets preview. Use `--prod` to promote. |
 | `vercel ls` | List recent deploys and their state (Ready / Error). |
 | `vercel curl <url>` | Bypass Vercel deployment protection for testing. Note this repo does **not** have deployment protection enabled. |
 
-**The L0 critic engine** lives in `/Users/gm/mysleeplabs-admin/scripts/critic-test.ts` + `lib/critic/engine.ts`. Apply it after content edits, before pushing. To run:
+The L0 critic engine itself lives in `lib/critic/engine.ts` (TS port, byte-parity mirror of `mysleeplabs-admin/content/10_CRITIC_SYSTEM/scripts/critic_engine.py`). The harness CLI lives at `scripts/critic-test.ts`. Run `npx tsx scripts/critic-test.ts --test-negation` for the 10-string audit. To run L0 against a folder of content, copy the python engine from the admin repo or run:
 
 ```bash
-npx tsx /Users/gm/mysleeplabs-admin/scripts/critic-test.ts \
-    --dir /Users/gm/mysleeplabs-web/app \
-    --dir /Users/gm/mysleeplabs-web/components
+python3 /Users/gm/mysleeplabs-admin/content/10_CRITIC_SYSTEM/scripts/critic_engine.py \
+    /path/to/markdown/dir
 ```
 
-(Tip: copy that script into `./scripts/` first, or call it via `npx tsx /absolute/path`.)
+## Continuous integration
+
+GitHub repo: **https://github.com/travellayover/sleep-layers** (public, master branch).
+
+Every push and every PR to master runs `.github/workflows/ci.yml`. The workflow runs the same three gates as `scripts/ci.sh`:
+
+1. `tsc --noEmit` — typecheck
+2. L0 negation harness (10-string audit, expects `ALL PASS (10/10)`)
+3. `npm run build` — production build, must complete and prerender ≥ 27 routes
+
+If a CI run fails, the relevant run is `Latest: <commit-sha> failed @ <url>` in the run list:
+
+```bash
+gh run list --repo travellayover/sleep-layers --limit 5
+gh run view <run-id> --repo travellayover/sleep-layers --log-failed
+```
 
 ---
 
