@@ -1,0 +1,38 @@
+name: ci
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+# Cancel the previous in-flight run for the same branch when a new
+# commit lands. Vercel also deploys on every push, so we want the
+# CI signal to be current, not stale.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: install dependencies
+        run: npm ci --no-audit --no-fund
+
+      # The local-machine CI lives at scripts/ci.sh and is the same
+      # gates a developer runs from a fresh checkout. Reuse it.
+      - name: run CI (typecheck + L0 harness + production build)
+        run: bash scripts/ci.sh

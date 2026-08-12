@@ -1,10 +1,25 @@
 # Sleep Layers — Status & Owed Work
 
-_Last updated: 2026-08-12 by the session that published this repo._
+_Last updated: 2026-08-11 — Creative enhancement session (GSAP animations added)._
 
 ## What is live right now
 
-Visit [https://mysleeplabs-web.vercel.app](https://mysleeplabs-web.vercel.app). All 24 routes render. No auth gate. Catch-all API at `/api/public` is stubbed (returns safe defaults, persists nothing).
+Visit [https://mysleeplabs-web.vercel.app](https://mysleeplabs-web.vercel.app). All 24 routes render with **GSAP-powered animations**:
+- ✨ Animated background with particle drift and gradient mesh
+- 🌊 Animated logo with undulating waves (breathing rhythm)
+- 📜 Scroll-triggered reveals on all pages
+- 🎨 Enhanced hover states with glow effects and scale transitions
+- 〰️ Wave dividers between sections
+- 🎯 Stagger animations for lists and grids
+
+**New components added:**
+- `components/public/animated-background.tsx` — particle field + wave dividers
+- `components/public/animated-logo.tsx` — animated brand logo
+- `lib/animations.ts` — GSAP hooks (useScrollReveal, useStaggerFade, useParallax)
+
+**Dependencies added:**
+- `gsap` + `@gsap/react` — animation engine
+- `lenis` — smooth scroll (optional, can be enabled in layout)
 
 Routes shipped:
 - `/` (home)
