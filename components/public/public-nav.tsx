@@ -33,7 +33,7 @@ export function PublicNav() {
         <div className="mx-auto flex max-w-6xl items-center justify-end px-5 py-5 sm:px-8">
           <Link
             href="/about"
-            className="text-[12px] font-medium tracking-[0.04em] text-white/45 transition-colors duration-200 hover:text-white/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-2 focus-visible:ring-offset-[#00143C] rounded-sm"
+            className="text-[12px] font-medium tracking-[0.04em] text-white/45 transition-colors duration-200 hover:text-white/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B1B3A] rounded-sm"
           >
             About
           </Link>

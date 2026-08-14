@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PolicyPage } from "@/components/public/policy-page";
 
 export const metadata: Metadata = {
-  title: "Medical Disclaimer — MySleepLabs",
+  title: "Medical Disclaimer | MySleepLabs",
   description:
     "MySleepLabs is an educational publication and does not provide medical advice.",
 };

@@ -147,31 +147,38 @@ export function ProductLabIndex({
         </p>
       </section>
 
-      <section className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <section className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((p) => (
           <Link
             key={p.slug}
             href={`/product-lab/${p.slug}`}
-            className="group block rounded-2xl border border-border bg-card p-6 transition-colors duration-200 hover:border-sleep/40"
+            className="group flex h-full flex-col overflow-hidden rounded-[1.15rem] border border-border bg-card transition-colors duration-200 hover:border-sleep/35"
           >
-            <div className="flex items-center justify-between">
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-sleep">
-                {p.category}
-              </span>
-              <ResearchStatusBadge status={p.researchStatus} />
+            <div
+              className="aspect-[4/5] w-full"
+              style={{
+                background:
+                  "linear-gradient(155deg, #FFFcf8 0%, #E8E1D6 48%, #D4CDBF 100%)",
+              }}
+              aria-hidden="true"
+            />
+            <div className="flex flex-1 flex-col p-4">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-sleep">
+                  {p.category}
+                </span>
+                <ResearchStatusBadge status={p.researchStatus} />
+              </div>
+              <h2 className="mt-2 font-serif text-lg font-medium leading-snug tracking-tight text-foreground">
+                {p.name}
+              </h2>
+              <p className="mt-2 line-clamp-2 text-[13px] leading-relaxed text-muted-foreground">
+                {p.oneLine}
+              </p>
+              <p className="mt-3 text-[12px] font-medium text-muted-foreground/80">
+                {p.priceRange} · {p.useCase[0]}
+              </p>
             </div>
-            <h2 className="mt-3 font-serif text-lg font-medium leading-snug text-foreground">
-              {p.name}
-            </h2>
-            <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
-              {p.oneLine}
-            </p>
-            <p className="mt-4 text-[12px] font-medium text-muted-foreground/80">
-              {p.priceRange} · {p.useCase[0]}
-            </p>
-            <p className="mt-3 text-[12px] font-medium text-sleep transition-colors group-hover:text-sleep-hover">
-              Open review →
-            </p>
           </Link>
         ))}
       </section>

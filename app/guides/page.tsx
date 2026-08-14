@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { GUIDES } from "@/lib/guides/content";
+import { RelatedPins } from "@/components/public/related-pins";
 import { SceneFrame } from "@/components/public/scene-frame";
 
 export const metadata: Metadata = {
@@ -32,33 +33,21 @@ export default function GuidesIndexPage() {
         tone="day"
       />
 
-      <section className="mt-12 grid gap-5 md:grid-cols-2">
-        {GUIDES.map((g) => (
-          <Link
-            key={g.slug}
-            href={`/guides/${g.slug}`}
-            className="group block rounded-2xl border border-border bg-card p-6 transition-colors duration-200 hover:border-sleep/40"
-          >
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-sleep">
-              {g.topic.split(" · ")[0]}
-            </p>
-            <h2 className="mt-2 font-serif text-xl font-medium leading-snug text-foreground">
-              {g.title}
-            </h2>
-            <p className="mt-3 line-clamp-3 text-[13px] leading-relaxed text-muted-foreground">
-              {g.twoSentenceAnswer}
-            </p>
-            <p className="mt-4 text-[12px] font-medium text-sleep transition-colors group-hover:text-sleep-hover">
-              Read the guide →
-            </p>
-          </Link>
-        ))}
+      <section className="mt-12">
+        <RelatedPins
+          items={GUIDES.map((g) => ({
+            href: `/guides/${g.slug}`,
+            kicker: g.topic.split(" · ")[0],
+            title: g.title,
+            body: g.twoSentenceAnswer,
+          }))}
+        />
       </section>
 
       <p className="mt-12 text-center text-[13px] text-muted-foreground">
         Want a weekly note when new guides publish?{" "}
         <Link
-          href="/#newsletter"
+          href="/#waitlist"
           className="font-medium text-foreground underline decoration-sleep/40 underline-offset-2 hover:text-sleep"
         >
           Subscribe to the weekly note

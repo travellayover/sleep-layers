@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PolicyPage } from "@/components/public/policy-page";
 
 export const metadata: Metadata = {
-  title: "Affiliate Disclosure — MySleepLabs",
+  title: "Affiliate Disclosure | MySleepLabs",
   description: "How MySleepLabs discloses affiliate relationships.",
 };
 

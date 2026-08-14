@@ -73,7 +73,7 @@ export function ProductStoryScroll({
             className="pointer-events-none absolute inset-0"
             style={{
               background:
-                "radial-gradient(ellipse at 70% 65%, rgba(248,184,64,0.05) 0%, transparent 40%), radial-gradient(ellipse at 20% 20%, rgba(80,90,230,0.06) 0%, transparent 40%)",
+                "radial-gradient(ellipse at 70% 65%, rgba(242,184,75,0.05) 0%, transparent 40%), radial-gradient(ellipse at 20% 20%, rgba(91,103,232,0.06) 0%, transparent 40%)",
             }}
             aria-hidden="true"
           />

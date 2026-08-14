@@ -1,6 +1,7 @@
-# Hero sleeper — OSINT → illustration
+# Hero: Kiola evening
 
-**Live asset:** `public/brand/hero/sleeper.png` (editorial illustration)  
-Also kept: `sleeper-illustration.png` (same file)
+**Live asset:** `public/brand/hero/kiola-evening.png`
 
-Pipeline: Unsplash lifestyle refs → photo-locked compose → illustrated remake (soft 3D / painted editorial). Motion: GSAP breath + periwinkle wash + gold glints.
+Cinematic 16:10 crop of the bedroom Kiola still. Wide scene: bed, lamp, dusk window. Not the studio teaching pose, and not a second copy of the wave mark.
+
+`kiola.png` is the locked studio intro (unused on this page). `sleeper.png` is the retired human still.

@@ -14,14 +14,14 @@ export function AnimatedBackground() {
         className="absolute -left-[10%] top-[-20%] h-[55vh] w-[55vw] rounded-full opacity-70 blur-3xl"
         style={{
           background:
-            'radial-gradient(circle, rgba(80, 90, 230, 0.07) 0%, transparent 70%)',
+            'radial-gradient(circle, rgba(91, 103, 232, 0.07) 0%, transparent 70%)',
         }}
       />
       <div
         className="absolute -right-[8%] bottom-[-15%] h-[50vh] w-[50vw] rounded-full opacity-80 blur-3xl"
         style={{
           background:
-            'radial-gradient(circle, rgba(248, 184, 64, 0.05) 0%, transparent 70%)',
+            'radial-gradient(circle, rgba(242, 184, 75, 0.05) 0%, transparent 70%)',
         }}
       />
     </div>

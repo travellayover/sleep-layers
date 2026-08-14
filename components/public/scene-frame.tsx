@@ -45,8 +45,8 @@ export function SceneFrame({
           data-parallax="0.4"
           style={{
             background: isNight
-              ? "radial-gradient(ellipse 55% 45% at 18% 22%, rgba(80,90,230,0.18) 0%, transparent 62%)"
-              : "radial-gradient(ellipse at 18% 25%, rgba(80,90,230,0.05) 0%, transparent 42%)",
+              ? "radial-gradient(ellipse 55% 45% at 18% 22%, rgba(91,103,232,0.18) 0%, transparent 62%)"
+              : "radial-gradient(ellipse at 18% 25%, rgba(91,103,232,0.05) 0%, transparent 42%)",
           }}
           aria-hidden="true"
         />
@@ -56,8 +56,8 @@ export function SceneFrame({
           data-parallax="0.7"
           style={{
             background: isNight
-              ? "radial-gradient(ellipse 40% 35% at 82% 68%, rgba(248,184,64,0.11) 0%, transparent 55%)"
-              : "radial-gradient(ellipse at 82% 70%, rgba(248,184,64,0.06) 0%, transparent 36%)",
+              ? "radial-gradient(ellipse 40% 35% at 82% 68%, rgba(242,184,75,0.11) 0%, transparent 55%)"
+              : "radial-gradient(ellipse at 82% 70%, rgba(242,184,75,0.06) 0%, transparent 36%)",
           }}
           aria-hidden="true"
         />

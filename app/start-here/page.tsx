@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { SceneFrame } from "@/components/public/scene-frame";
+import { RelatedPins } from "@/components/public/related-pins";
 
 export const metadata: Metadata = {
   title: "Start Here — MySleepLabs",
@@ -82,25 +83,15 @@ export default function StartHerePage() {
         <h2 className="font-serif text-2xl font-medium tracking-tight text-foreground md:text-3xl">
           Or pick a path directly.
         </h2>
-        <ul className="mt-6 divide-y divide-border border-y border-border">
-          {PATHS.map((p) => (
-            <li key={p.href}>
-              <Link href={p.href} className="path-row group flex gap-4 py-5 pl-3 sm:pl-4">
-                <span className="min-w-0 flex-1">
-                  <span className="block font-serif text-lg font-medium text-foreground transition-colors group-hover:text-sleep">
-                    {p.title}
-                  </span>
-                  <span className="mt-1 block text-[13px] leading-relaxed text-muted-foreground">
-                    {p.body}
-                  </span>
-                </span>
-                <span className="path-arrow shrink-0 pt-1" aria-hidden="true">
-                  →
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <RelatedPins
+          columns={2}
+          items={PATHS.map((p) => ({
+            href: p.href,
+            kicker: "Path",
+            title: p.title,
+            body: p.body,
+          }))}
+        />
       </section>
 
       <aside className="mt-16 rounded-xl border border-border bg-paper-2 p-6">

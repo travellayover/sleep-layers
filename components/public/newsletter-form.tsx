@@ -48,14 +48,43 @@ export function NewsletterForm({
     }
   }
 
+  async function shareInvite() {
+    const url =
+      typeof window !== "undefined" ? window.location.origin : "https://mysleeplabs.co";
+    const text = "Practical sleep for the night you actually have. MySleepLabs is opening soon.";
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: "MySleepLabs", text, url });
+        return;
+      }
+      await navigator.clipboard.writeText(url);
+      toast.success("Link copied. Share with a friend.");
+    } catch {
+      try {
+        await navigator.clipboard.writeText(url);
+        toast.success("Link copied. Share with a friend.");
+      } catch {
+        toast.error("Couldn’t share. Copy mysleeplabs.co from the address bar.");
+      }
+    }
+  }
+
   if (status === "done" && onDark) {
     return (
-      <p
-        className="rounded-full border border-white/15 bg-white/5 px-5 py-3.5 text-[14px] leading-snug text-[var(--color-night-fg)]/85"
-        role="status"
-      >
-        You’re on the list. See you soon.
-      </p>
+      <div className="flex w-full flex-col items-center gap-3" role="status">
+        <p className="rounded-full border border-white/15 bg-white/5 px-5 py-3.5 text-[14px] leading-snug text-[var(--color-night-fg)]/85">
+          You’re on the list. See you soon.
+        </p>
+        <Button
+          type="button"
+          variant="outline"
+          size="lg"
+          onClick={shareInvite}
+          className="cta-press h-11 w-full rounded-full border-white/20 bg-transparent text-[14px] text-[var(--color-night-fg)] hover:bg-white/5 hover:text-[var(--color-night-fg)]"
+        >
+          Share with a friend
+        </Button>
+      </div>
     );
   }
 
@@ -79,7 +108,7 @@ export function NewsletterForm({
         disabled={status === "loading"}
         className={
           onDark
-            ? "h-12 w-full rounded-full border-white/18 bg-white/[0.08] px-5 text-[15px] text-[var(--color-night-fg)] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] placeholder:text-white/38 transition-[border-color,box-shadow,background-color] duration-200 focus-visible:border-[#F8B840]/70 focus-visible:bg-white/[0.12] focus-visible:ring-[#F8B840]/25"
+            ? "h-12 w-full rounded-full border-white/18 bg-white/[0.08] px-5 text-[15px] text-[var(--color-night-fg)] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] placeholder:text-white/38 transition-[border-color,box-shadow,background-color] duration-200 focus-visible:border-[#F2B84B]/70 focus-visible:bg-white/[0.12] focus-visible:ring-[#F2B84B]/25"
             : "h-12 w-full max-w-xs rounded-full border-border bg-background px-5 text-[14px] transition-[border-color,box-shadow] duration-200 focus-visible:border-sleep focus-visible:ring-sleep/30 sm:mx-auto sm:w-auto"
         }
       />
@@ -89,7 +118,7 @@ export function NewsletterForm({
         size="lg"
         className={
           onDark
-            ? "cta-press h-12 w-full rounded-full bg-[#F8B840] px-7 text-[15px] font-semibold text-[#00143C] shadow-[0_12px_32px_-14px_rgba(248,184,64,0.65)] hover:bg-[#F8B840]/92"
+            ? "cta-press h-12 w-full rounded-full bg-[#F2B84B] px-7 text-[15px] font-semibold text-[#0B1B3A] shadow-[0_12px_32px_-14px_rgba(242,184,75,0.65)] hover:bg-[#F2B84B]/92"
             : "cta-press shrink-0 rounded-full bg-primary px-7 text-primary-foreground hover:bg-primary/92"
         }
       >

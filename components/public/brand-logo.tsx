@@ -7,10 +7,10 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
 
-const SLEEP = "#505AE6";
-const GOLD = "#F8B840";
+const SLEEP = "#5B67E8";
+const GOLD = "#F2B84B";
 const WHITE = "#F4F2EC";
-const NAVY = "#00143C";
+const NAVY = "#0B1B3A";
 
 type Size = "sm" | "md" | "lg" | "xl";
 
@@ -34,7 +34,7 @@ export function BrandMark({
   const px = MARK_PX[size];
   return (
     <Image
-      src="/brand/mysleeplabs-mark.jpg"
+      src="/brand/sleep_layers_avatar.png"
       alt=""
       width={px}
       height={px}

@@ -179,7 +179,7 @@ function PageLoader({ onComplete }: { onComplete: () => void }) {
       className="fixed inset-0 z-[100] flex flex-col items-center justify-center will-change-transform"
       style={{
         background:
-          "linear-gradient(165deg, #0A1A4A 0%, #00143C 48%, #00081F 100%)",
+          "linear-gradient(165deg, #132456 0%, #0B1B3A 48%, #00081F 100%)",
       }}
       role="status"
       aria-live="polite"
@@ -193,14 +193,14 @@ function PageLoader({ onComplete }: { onComplete: () => void }) {
           className="absolute -left-[15%] top-[-10%] h-[55%] w-[70%] rounded-full opacity-90 blur-3xl"
           style={{
             background:
-              "radial-gradient(circle, rgba(80,90,230,0.22) 0%, transparent 68%)",
+              "radial-gradient(circle, rgba(91,103,232,0.22) 0%, transparent 68%)",
           }}
         />
         <div
           className="absolute -right-[10%] bottom-[5%] h-[45%] w-[55%] rounded-full opacity-80 blur-3xl"
           style={{
             background:
-              "radial-gradient(circle, rgba(248,184,64,0.10) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(242,184,75,0.10) 0%, transparent 70%)",
           }}
         />
       </div>

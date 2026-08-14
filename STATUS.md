@@ -1,6 +1,16 @@
 # MySleepLabs — Status & Owed Work
 
-_Last updated: 2026-08-11 — Pinterest coming-soon polished (Impeccable)._
+**Read first:** [`/Users/gm/mysleeplabs/00_PRODUCT_SPINE.md`](/Users/gm/mysleeplabs/00_PRODUCT_SPINE.md) — company map from this waitlist site through both content lanes to audio. This repo owns the public preview only; copy, GPU, and VO live elsewhere.
+
+_Last updated: 2026-08-14. Pin-page `/` shipped (4:5 Kiola, no hero lockup, one caption line). Related pins on guides / Product Lab. Waitlist still acknowledge-only._
+
+## Coming-soon research
+
+Full write-up: [`docs/coming-soon-inspiration.md`](docs/coming-soon-inspiration.md)
+
+**Best 10:** Arc · Sonna · Kwami · WaitlistKit · Superlist · Loftie · Vela · Waity · Linear/Raycast calm · Robinhood referral (post-submit).
+
+**Thesis:** Quiet night confidence — one viewport, illustrated sleeper, lamp atmosphere, one CTA. Motion = intro → image reveal → fabric drift → form. Share after signup.
 
 ## Pre-launch one-pager mode (active)
 
@@ -19,8 +29,8 @@ That restores full nav/footer, Cmd-K search, and stops middleware redirects.
 
 | Section | Anchor | Role |
 |---|---|---|
-| Brand intro loader | — | Wave mark + gold dot; once per session; then hero |
-| Night hero | — | Brand, promise, waitlist + paths CTAs, scene |
+| Brand intro loader | — | Wave mark + gold dot; once per session; then pin |
+| Night pin | `#waitlist` | 4:5 Kiola card · coming soon · serif H1 · one line · Notify me |
 | Brand story | `#story` | What this is / education frame |
 | Path picker | `#paths` | Four paths → `#waitlist` (no separate destinations) |
 | Waitlist | `#waitlist` | Primary conversion |
@@ -102,14 +112,15 @@ CTA hierarchy (matches `05_FUNNEL/bio-links.md` pre-launch rule: checklist/list 
 
 ## What is live right now
 
-Visit [https://mysleeplabs-web.vercel.app](https://mysleeplabs-web.vercel.app). Brand system locked to the official logo on **warm light paper** surfaces:
+Visit [https://mysleeplabs-web.vercel.app](https://mysleeplabs-web.vercel.app). Brand system locked to the official Sleep Layers mark on **warm light paper** surfaces. Public name is **MySleepLabs**. The wave (three bands + amber point) is the mark, not a second brand.
 
-- **Palette:** `#00143C` navy · `#505AE6` sleep periwinkle · `#F8B840` gold (sparse CTAs) · paper `#F7F4EE` / raised `#FFFcf8`
+- **Palette:** `#0B1B3A` navy · `#5B67E8` sleep indigo · `#F2B84B` gold (sparse CTAs) · paper `#F7F4EE` / raised `#FFFcf8`
 - **Surfaces:** light / off-white paper sitewide; navy reserved for circular mark, night scene frames / full-bleed home hero, contrast CTAs
-- **Mark:** circular wave logo in nav + footer + animated SVG lockup on home
-- **Assets:** `public/brand/mysleeplabs-mark.jpg`, `mysleeplabs-lockup.jpg`
-- **Home:** brand intro → full-bleed night hero → story → path picker → waitlist → setup tease → trust → closing CTA
-- **Motion:** PageLoader (session once) + authored hero entrance + soft scene parallax; section reveals play once; reduced-motion respected; no particle field
+- **Mark:** locked circular PNG on home (`sleep_layers_avatar.png`); animated SVG wave still used in the intro loader
+- **Assets:** `public/brand/sleep_layers_avatar.png`, `mysleeplabs_horizontal_logo.png` (JPG mark/lockup kept as unused fallbacks)
+- **Home (prelaunch):** one viewport. Brand, Kiola portrait (locked still), method line, email waitlist. Guides / Product Lab / Buy stay soft-locked.
+- **Copy:** notice, test one change, learn what fits. Educational, not medical advice. No em dashes on public prelaunch surfaces.
+- **Motion:** PageLoader (session once) + authored hero entrance; reduced-motion respected; no particle field
 - **Gate:** `lib/site-mode.ts` `isPrelaunch` (default true); middleware soft-locks secondary marketing routes
 
 **Brand components:**
@@ -140,9 +151,9 @@ API shipped (single endpoint):
 
 ## Gaps left (visual / brand)
 
-- Real editorial 3D art not yet produced (SceneFrame placeholders remain on interior pages; home uses full-bleed night wash + scene copy)
-- Official PNG lockup assets may replace JPG when available
-- Metadata titles + chrome use **MySleepLabs**; “Sleep Layers” kept only as deprecated wordmark alias
+- Real editorial 3D art not yet produced (SceneFrame placeholders remain on interior pages; home uses full-bleed night wash + sleeper illustration)
+- Soft-locked interior pages still mix older title punctuation (em dashes). Prelaunch-visible surfaces are aligned.
+- Metadata titles + chrome use **MySleepLabs**; Sleep Layers is the mark geometry only
 
 ## Owed work (post pre-launch — pick when ready to transact)
 

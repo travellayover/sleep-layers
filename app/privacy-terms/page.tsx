@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PolicyPage } from "@/components/public/policy-page";
 
 export const metadata: Metadata = {
-  title: "Privacy & Terms — MySleepLabs",
+  title: "Privacy & Terms | MySleepLabs",
   description: "How MySleepLabs handles personal data and the terms of using this site.",
 };
 

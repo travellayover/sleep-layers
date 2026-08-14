@@ -32,9 +32,9 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MySleepLabs — Practical sleep for the night you have",
+  title: "MySleepLabs. Practical sleep for the night you have",
   description:
-    "Clear evening guidance for busy minds, shifting schedules, and shared homes. Join the waitlist. Educational content — not medical advice.",
+    "Clear evening guidance for busy minds, shifting schedules, and shared homes. Join the waitlist. Educational content, not medical advice.",
 };
 
 const PATHS = [
@@ -52,7 +52,7 @@ const PATHS = [
   },
   {
     title: "Restless or Unrefreshed path",
-    description: "Waking up unrefreshed — noticing patterns first.",
+    description: "Waking up unrefreshed. Noticing patterns first.",
     href: "/restless",
     section: "Audience path",
   },

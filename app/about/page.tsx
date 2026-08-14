@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PolicyPage } from "@/components/public/policy-page";
 
 export const metadata: Metadata = {
-  title: "About — MySleepLabs",
+  title: "About | MySleepLabs",
   description:
     "An independent sleep-education and product-discovery publication that uses AI to assist research and content creation.",
 };
@@ -12,7 +12,7 @@ export default function AboutPage() {
     <PolicyPage
       title="About MySleepLabs"
       description="An independent sleep-education and product-discovery publication."
-      intro="MySleepLabs is an independent sleep-education and product-discovery publication. We use AI to assist research and content creation, but every guide is checked against the underlying sources, every product review lists limitations before benefits, and every affiliate relationship is disclosed."
+      intro="MySleepLabs is an independent sleep-education brand, not a clinic. The method is notice, test one change, learn what fits. We use AI to assist research and content creation, but every guide is checked against the underlying sources, every product review lists limitations before benefits, and every affiliate relationship is disclosed."
       sections={[
         {
           heading: "What we publish",

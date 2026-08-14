@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { GUIDES, type Guide } from "@/lib/guides/content";
+import { GUIDES } from "@/lib/guides/content";
 import { Badge } from "@/components/ui/badge";
 import { SceneFrame } from "@/components/public/scene-frame";
+import { RelatedPins } from "@/components/public/related-pins";
 
 type AudienceKey = "FOCUS" | "CLARITY" | "SHIFT" | "FAMILY";
 
@@ -43,10 +44,15 @@ export function AudienceLandingPage({
 
       <SceneFrame className="mt-10" scene={scene} environment={environment} tone="day" />
 
-      <section className="mt-12 space-y-4">
-        {guides.map((g) => (
-          <GuideRow key={g.slug} guide={g} />
-        ))}
+      <section className="mt-12">
+        <RelatedPins
+          items={guides.map((g) => ({
+            href: `/guides/${g.slug}`,
+            kicker: g.topic.split(" · ")[0],
+            title: g.title,
+            body: g.twoSentenceAnswer,
+          }))}
+        />
       </section>
 
       <section className="mt-14 grid gap-6 md:grid-cols-2">
@@ -77,29 +83,5 @@ export function AudienceLandingPage({
         </div>
       </section>
     </article>
-  );
-}
-
-function GuideRow({ guide }: { guide: Guide }) {
-  return (
-    <Link href={`/guides/${guide.slug}`} className="group block">
-      <div className="rounded-2xl border border-border bg-card p-6 transition-colors duration-200 hover:border-sleep/40">
-        <Badge
-          variant="outline"
-          className="w-fit border-sleep/25 font-mono text-[10px] uppercase tracking-wider text-sleep"
-        >
-          {guide.topic.split(" · ")[0]}
-        </Badge>
-        <h2 className="mt-3 font-serif text-xl leading-snug text-foreground">
-          {guide.title}
-        </h2>
-        <p className="mt-2 text-[14px] leading-relaxed text-muted-foreground">
-          {guide.twoSentenceAnswer}
-        </p>
-        <p className="mt-4 text-[12px] font-medium text-sleep transition-colors group-hover:text-sleep-hover">
-          Read the guide →
-        </p>
-      </div>
-    </Link>
   );
 }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PolicyPage } from "@/components/public/policy-page";
 
 export const metadata: Metadata = {
-  title: "Corrections Policy — MySleepLabs",
+  title: "Corrections Policy | MySleepLabs",
   description:
     "How MySleepLabs handles errors, fabrications, and outdated claims.",
 };
