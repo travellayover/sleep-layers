@@ -23,6 +23,18 @@ Do not ship the cover pin alone. Related pins 2–4 are the unsell. The cover de
 
 One evening. One room. One person (Kiola). Four cards that read as a board, not a brochure.
 
+**Made stills** (3:4 stand-in for 4:5; 9:16 for the Reel cover):
+
+| Card | File |
+|---|---|
+| 1 Cover | [`art/sleepalb-01-cover-coma.png`](./art/sleepalb-01-cover-coma.png) |
+| 1 Reel cover | [`art/sleepalb-01-cover-coma-9x16.png`](./art/sleepalb-01-cover-coma-9x16.png) |
+| 2 Unsell | [`art/sleepalb-01-unsell.png`](./art/sleepalb-01-unsell.png) |
+| 3 Mix-up | [`art/sleepalb-01-mixup-lamp.png`](./art/sleepalb-01-mixup-lamp.png) |
+| 4 Tonight | [`art/sleepalb-01-tonight-hours.png`](./art/sleepalb-01-tonight-hours.png) |
+
+These are design stills, not a finished post. Pin description and Reel must still unsell. Do not run the cover alone.
+
 ---
 
 ## Copy lock (do not rewrite on the art)
