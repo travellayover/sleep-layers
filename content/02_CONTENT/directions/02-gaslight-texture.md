@@ -152,4 +152,6 @@ A false-lead hook is unfinished content. Do not post the line alone. Do not put 
 
 The bank in `1000-hooks.md` is **leads only**. Each family lists the unsell the story owes.
 
+Three full posts (coma, red eyes, why should I sleep) are written out in [`03-worked-stories.md`](./03-worked-stories.md). Copy that spine until it is muscle memory.
+
 Finished assets still pass L0. Educational. Not medical advice. We are the people who take the scare back.

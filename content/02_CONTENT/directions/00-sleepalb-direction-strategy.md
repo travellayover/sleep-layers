@@ -85,6 +85,7 @@ Use existing guides. Do not invent a new promise for each hook.
 
 | Hook family | Guide / path to land on |
 |---|---|
+| Coma / "I will not come back" rumors | Unsell first, then `how-much-sleep-do-you-actually-need`. Full worked story in [`03-worked-stories.md`](./03-worked-stories.md) |
 | Why should I sleep / how much is enough | `how-much-sleep-do-you-actually-need` |
 | Eyes, face, puffy, dry morning | `bedroom-temperature-18c-is-a-starting-point`, `light-lamps-and-the-bedroom` |
 | Slept 8 hours, still wrecked | `run-a-14-day-sleep-diary`, `wearable-sleep-trackers-what-they-actually-measure` |
@@ -110,23 +111,23 @@ Persona lanes stay the four on the site: FOCUS, CLARITY, SHIFT, FAMILY. Every ho
 
 A week of SleepAlb is 7 openers, not 7 sermons.
 
-| Day | Mix | Example opener |
-|---|---|---|
-| 1 | Why / dare | why should I sleep |
-| 2 | After-sleep body | my eyes are red after sleep |
-| 3 | Paradox | I slept 8 hours and feel worse |
-| 4 | Clock | why is it always 3:07 |
-| 5 | Room or drink | coffee from 2pm is still here |
-| 6 | Household or shift | my partner is asleep in 40 seconds |
-| 7 | Score vs feel or myth | my watch said I slept great |
+| Day | False-lead family | Example opener | Story must unsell |
+|---|---|---|---|
+| 1 | 01 coma-myth | sleeping can put you in a coma | sleep is not a coma |
+| 2 | 04 eyes | my eyes are red after sleep | not leftover unconsciousness |
+| 3 | 09 why-leave | why should I sleep | rest is not optional theft |
+| 4 | 07 3am | 3:07 is the hour you almost do not come back | a clock, not a fate |
+| 5 | 06 watch | my watch says I was gone | motion, not a death certificate |
+| 6 | 11 they-left | they fell asleep like they left the planet | fast sleep is not another state |
+| 7 | 05 eight-hours | 8 hours will put you under | the number is not a spell |
 
-Repeat the **shape**, not the same 7 lines. The 1,000-hook bank is the rotation so the album does not collapse into "5 tips" by week three.
+Repeat the **shape**, not the same 7 lines. Every post still has to unsell in the same file. Worked scripts for days 1–3: [`03-worked-stories.md`](./03-worked-stories.md).
 
 Format mix (when you produce the actual asset):
 
 - 9:16 talking or Kiola still + big type (Reels / Shorts / TikTok)
-- 4:5 Pin title using the hook as the pin title
-- Carousel only after the hook is proven: Debunk, Blueprint, Checklist, or Guide ranges already in the critic engine
+- 4:5 Pin: hook as title, **unsell in the description** or do not post
+- Debunk carousel after the hook is proven (9–12 slides). Slide 1 is the lead. Slides 3–4 take it back.
 
 ---
 
@@ -147,29 +148,28 @@ Do not put "SleepAlb" on the public site lockup. The album name is for operators
 
 Educational. Not medical advice. Same critic lists as the rest of the content repo.
 
-Hooks may name a **body fact** or a **night fact**. They may not name a cure, a treatment, a prevention, a guarantee, or a diagnosis.
+The hook may **voice a rumor**. The body may not keep it.
 
-Safe: my eyes are red after sleep  
-Unsafe: red eyes after sleep means you have X  
-Unsafe: this fixes insomnia  
-Unsafe: clinically proven morning face
+Safe hook: sleeping can put you in a coma  
+Safe body: it cannot. sleep is not a coma. here is the mix-up.  
+Unsafe hook-as-fact: sleep will put you in a coma and here is how  
+Unsafe body: this fixes insomnia / clinically proven / you have X
 
-If a hook needs a condition word to work, drop the hook. The bank below is written to stay on the safe side of the hard list and to avoid soft-flag bait in the opener.
-
-When the *body* of a post must mention professional support, use the existing guide closer. Do not put that in the first line.
+Hard-list words still fail the finished caption. If someone cannot be woken, stop giving tips and land on `when-professional-support-is-appropriate`. Do not put that scare in the first line as a stinger.
 
 ---
 
 ## How to pull a hook into production
 
 1. Pick one line from `1000-hooks.md`.
-2. Tag the family and the site path (FOCUS / CLARITY / SHIFT / FAMILY / ALL).
-3. Write one reframe you can stand behind without a PMID in the first sentence.
-4. Attach one `whatToTryTonight` from a real guide.
-5. Write the caption (40–180 words, no like-this-post, sources on the finished asset).
-6. Run L0 on the finished carousel or caption file, not on this folder.
+2. Write the rumor it implies in one sentence.
+3. Unsell that rumor in one sentence. If you cannot, drop the lead.
+4. Name the mix-up, then one `whatToTryTonight` from a real guide.
+5. Write what this cannot promise.
+6. Write the caption (40–180 words, no like-this-post, sources on the finished asset). The caption must unsell. The hook still must not.
+7. Run L0 on the finished carousel or caption file, not on this folder.
 
-If you cannot name the try-tonight in one breath, the hook is too big. Pick a smaller line.
+Copy the spine from [`03-worked-stories.md`](./03-worked-stories.md) until it is muscle memory. If you cannot name the try-tonight in one breath, the hook is too big.
 
 ---
 
