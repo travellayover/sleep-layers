@@ -129,6 +129,8 @@ Format mix (when you produce the actual asset):
 - 4:5 Pin: hook as title, **unsell in the description** or do not post
 - Debunk carousel after the hook is proven (9–12 slides). Slide 1 is the lead. Slides 3–4 take it back.
 
+Next post to make: coma rumor on the **PT (Pinterest) model** — four 4:5 cards, one 9:16 crop. Spec: [`04-next-post-pt-model.md`](./04-next-post-pt-model.md).
+
 ---
 
 ## Visual direction (keep Kiola, keep the room)
