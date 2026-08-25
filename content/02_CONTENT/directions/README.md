@@ -7,9 +7,16 @@ This folder is **not** a carousel drop. Do not run the L0 critic over it as if t
 | File | What it is |
 |---|---|
 | [`00-sleepalb-direction-strategy.md`](./00-sleepalb-direction-strategy.md) | The album: what SleepAlb is, how it maps to guides, how a post ships |
-| [`01-curiosity-patterns.md`](./01-curiosity-patterns.md) | The skill: 12 mother patterns, breeding rotations, how to hold a gap long enough that they watch |
-| [`1000-hooks.md`](./1000-hooks.md) | 1,000 openers, 25 families × 40, each meant to leave unpaid curiosity |
+| [`01-curiosity-patterns.md`](./01-curiosity-patterns.md) | Pattern breeding: how to make more lines that people actually watch |
+| [`02-gaslight-texture.md`](./02-gaslight-texture.md) | The machine: false-lead hook, then the story unsells it and puts the info in the body |
+| [`1000-hooks.md`](./1000-hooks.md) | 1,000 almost-wrong openers, 25 families × 40. Leads only. |
 
-**Voice check:** if it does not sound like something a tired person would mutter or type into search (`why should I sleep`, `my eyes are red after sleep`), it does not belong in this album.
+**The post:** hook starts different (scare, rumor, dare). Story shows it is not true. Real info lives in the story.
 
-**Watch check:** if they can finish the sentence, or if the hook already explains the red eyes, it is a nod, not a watch. Breed again. See `01-curiosity-patterns.md`.
+Example: *sleeping can put you in a coma* → it cannot. Sleep is not a coma. Here is the mix-up. Here is one tonight move.
+
+**Voice check:** first line sounds like a comment or a rumor (`why should I sleep`, `my eyes are red after sleep`, `sleeping can put you in a coma`).
+
+**Watch check:** if the hook already unsells itself, they will not watch.
+
+**Unsell check:** if the screenshot of the first frame could travel as a fact, you are not done. The body has to take it back.

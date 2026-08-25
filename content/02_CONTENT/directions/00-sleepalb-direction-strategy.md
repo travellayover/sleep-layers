@@ -26,7 +26,9 @@ One is a blunt challenge. One is a first-person after-effect. Both are private, 
 
 SleepAlb direction: **sound like the comment, not the course.**
 
-That is the voice. It is not yet the skill. The skill is making a line **curious enough to watch**, not just true enough to nod. A nod is a like. A gap is a watch. The 12 mother patterns, the eight rotations, and the first-12-seconds hold live in [`01-curiosity-patterns.md`](./01-curiosity-patterns.md).
+That is the voice. It is not yet the skill. The skill is making a line **curious enough to watch**, not just true enough to nod. A nod is a like. A gap is a watch. The 12 mother patterns live in [`01-curiosity-patterns.md`](./01-curiosity-patterns.md).
+
+The watch pattern: the hook starts **almost wrong**. Sleeping can put you in a coma. Then the story unsells it and puts the real info in the body. That is the gaslight — three seconds of a false night, then we take it back. [`02-gaslight-texture.md`](./02-gaslight-texture.md).
 
 ---
 
@@ -43,16 +45,20 @@ That is the voice. It is not yet the skill. The skill is making a line **curious
 | Score vs feel | Tracker said great, morning said no | Diary over dashboards |
 | Household | Someone else sleeps instantly | Family / shift / partner paths |
 
-Do not open on a benefit. Open on a **complaint, a paradox, or a dare.**
+Do not open on a benefit. Open on a **complaint, a paradox, a dare, or a false lead** the story will take back.
 
 ---
 
 ## Hook formula
 
 ```
-[muttered line, 3–12 words]
+[false lead — scare, rumor, or dare. no wink]
         ↓
-[one reframe or mechanism — not a diagnosis]
+[unsell: that is not true / not the whole night]
+        ↓
+[the mix-up in one breath]
+        ↓
+[one real mechanism — not a diagnosis]
         ↓
 [one try-tonight from an existing guide]
         ↓
@@ -61,15 +67,15 @@ Do not open on a benefit. Open on a **complaint, a paradox, or a dare.**
 [soft next step: save / path / waitlist]
 ```
 
-Rules for the muttered line:
+Rules for the lead:
 
-1. First person or a bare why-question. No "you should."
-2. Concrete body, clock, room, or leftover day. No "wellness."
-3. Something a person would search or say out loud.
-4. Observational, not clinical. Eyes red, jaw sore, 3am wake. Not a named disorder.
-5. Short enough to read on a first frame or a Pin title.
+1. Starts different from the lesson. If the title already unsells, they skip.
+2. Close enough that a tired person could believe it for one scroll.
+3. Not a method, not a diagnosis, not a guarantee.
+4. Short enough for a first frame or a Pin title.
+5. The story is obligated to unsell. A screenshot of the hook must not be allowed to travel as a fact.
 
-The body of the post does the teaching. The hook only has to be true enough to stop the thumb.
+The hook is allowed to be almost wrong. The body is not.
 
 ---
 
@@ -171,13 +177,14 @@ If you cannot name the try-tonight in one breath, the hook is too big. Pick a sm
 
 Better is not cleverer. Better is **curious enough to watch**.
 
-A line is better when it opens a gap the viewer cannot close without staying:
+A line is better when it sounds like a rumor the story has to kill:
 
 - why should I sleep  
 - my eyes are red after sleep  
-- I look worse after I finally slept  
-- why do I wake at 3 and stay up  
-- my tracker is happy and I am not  
+- sleeping can put you in a coma  
+- 8 hours is a soft coma  
+- my eyes are red because I did not come all the way back  
+- if I sleep too long I will not wake up  
 
 A line is worse when it already paid the curiosity, or never charged any:
 
@@ -186,10 +193,11 @@ A line is worse when it already paid the curiosity, or never charged any:
 - Sleep hygiene 101  
 - You deserve better nights  
 - Here's why your eyes are red after sleep  
+- Sleep is not the same as a coma (as the hook)
 
-If they can finish the sentence, they will not watch. If a line could sit on a mattress ad, it is not SleepAlb.
+If the hook already unsells, they will not watch. If a line could sit on a mattress ad, it is not SleepAlb. If the story leaves the scare standing, the post failed.
 
-To make more, do not brainstorm vibes. Breed from a mother pattern. Eight rotations, four heat checks: [`01-curiosity-patterns.md`](./01-curiosity-patterns.md).
+To make more: take a boring true fact, write the rumor a tired person would make, unsell it in the body. [`01-curiosity-patterns.md`](./01-curiosity-patterns.md) · [`02-gaslight-texture.md`](./02-gaslight-texture.md).
 
 ---
 

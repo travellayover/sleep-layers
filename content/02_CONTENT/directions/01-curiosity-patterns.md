@@ -164,12 +164,16 @@ Seed: `my eyes are red after sleep`
 | Score | Dashboard vs mirror | my watch is proud of a face I do not recognize |
 | Reverse the want | They wanted the opposite | I wanted sleep to fix my face and it billed me instead |
 
-Then raise heat. Ask only these four checks:
+Ninth rotation, when you need it closer to gaslighting: **who is lying?** Hours, watch, morning, your mouth, sleep, they. Add the official story that is trying to cancel the evidence.
+
+Then raise heat. Ask only these checks:
 
 1. **Can they finish the sentence?** If yes, cut a word or add a contradiction.
 2. **Did you explain it?** If the cause is in the hook, move the cause to second 8.
 3. **Is it a night someone had?** If it is generic tired, add a body, a clock, or an object.
 4. **Would they search this or frame this?** Search = why / my / after. Frame = bathroom evidence.
+5. **Who is lying?** If nobody is selling an official night, it is still just tired. See [`02-gaslight-texture.md`](./02-gaslight-texture.md).
+6. **Did they almost agree?** `keep`, `supposed to`, `allowed`, `acting like`, `swear`, `fine`.
 
 If a rotation loses the gap, throw it away. Volume is not the skill. Breeding until the gap hurts is the skill.
 
@@ -197,6 +201,8 @@ Kills curiosity on contact:
 - POV templates that already tell the joke
 
 The viewer should think: *wait, that happens to me, and I do not know why either.*
+
+If you want the hotter version — *wait, is that real?* — use a **false lead** and put the truth in the story. Sleeping can put you in a coma. Then no. Then the mix-up. Then one tonight move. That machine is [`02-gaslight-texture.md`](./02-gaslight-texture.md).
 
 ---
 
