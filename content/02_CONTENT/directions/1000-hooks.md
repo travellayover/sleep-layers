@@ -12,7 +12,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 01-dare-why — dare why
+## 01-dare-why — dare / why
 
 **Mother:** Forbidden question  
 **Gap:** Is tonight even worth it.
@@ -99,7 +99,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 02-aftermath-face — aftermath face
+## 02-aftermath-face — aftermath / face
 
 **Mother:** Information gap + proof  
 **Gap:** Sleep should have cleared the face.
@@ -186,7 +186,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 03-broken-hours — broken hours
+## 03-broken-hours — broken / hours
 
 **Mother:** Broken deal  
 **Gap:** I paid in hours.
@@ -273,7 +273,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 04-false-finish — false finish
+## 04-false-finish — false / finish
 
 **Mother:** False finish  
 **Gap:** I thought I made it.
@@ -360,7 +360,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 05-clock-ghost — clock ghost
+## 05-clock-ghost — clock / ghost
 
 **Mother:** Clock ghost  
 **Gap:** This time owns me.
@@ -534,7 +534,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 07-object-leftover — object leftover
+## 07-object-leftover — object / leftover
 
 **Mother:** Object leftover  
 **Gap:** The day is still in the room.
@@ -621,7 +621,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 08-someone-else — someone else
+## 08-someone-else — someone / else
 
 **Mother:** Someone else can  
 **Gap:** Their night worked.
@@ -708,7 +708,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 09-score-liar — score liar
+## 09-score-liar — score / liar
 
 **Mother:** Score liar  
 **Gap:** The number is in a better mood than I am.
@@ -795,7 +795,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 10-room-vs-body — room vs body
+## 10-room-vs-body — room / vs / body
 
 **Mother:** Information gap  
 **Gap:** The room did its job. I did not.
@@ -882,7 +882,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 11-identity-crack — identity crack
+## 11-identity-crack — identity / crack
 
 **Mother:** Identity crack  
 **Gap:** I am not who I am at night.
@@ -969,7 +969,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 12-unwanted-wake — unwanted wake
+## 12-unwanted-wake — unwanted / wake
 
 **Mother:** Clock + false finish  
 **Gap:** I did not choose this wake.
@@ -1056,7 +1056,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 13-look-vs-feel — look vs feel
+## 13-look-vs-feel — look / vs / feel
 
 **Mother:** Proof + broken deal  
 **Gap:** The mirror and the body disagree.
@@ -1143,7 +1143,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 14-effort-tax — effort tax
+## 14-effort-tax — effort / tax
 
 **Mother:** Broken deal  
 **Gap:** I tried and still owe.
@@ -1230,7 +1230,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 15-stolen-morning — stolen morning
+## 15-stolen-morning — stolen / morning
 
 **Mother:** False finish  
 **Gap:** Morning arrived already used.
@@ -1317,7 +1317,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 16-wrong-place — wrong place
+## 16-wrong-place — wrong / place
 
 **Mother:** Almost + object  
 **Gap:** I can sleep anywhere but the bed.
@@ -1404,7 +1404,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 17-night-mind — night mind
+## 17-night-mind — night / mind
 
 **Mother:** Identity + object  
 **Gap:** Work starts when I lie down.
@@ -1491,7 +1491,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 18-weekend-lie — weekend lie
+## 18-weekend-lie — weekend / lie
 
 **Mother:** Broken deal  
 **Gap:** Extra hours made it worse.
@@ -1578,7 +1578,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 19-body-receipt — body receipt
+## 19-body-receipt — body / receipt
 
 **Mother:** Proof before name  
 **Gap:** A part reported the night.
@@ -1665,7 +1665,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 20-face-bill — face bill
+## 20-face-bill — face / bill
 
 **Mother:** Information gap  
 **Gap:** Sleep charged my face.
@@ -1752,7 +1752,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 21-unsaid-want — unsaid want
+## 21-unsaid-want — unsaid / want
 
 **Mother:** Unsaid want  
 **Gap:** I want the night, not the sleep.
@@ -1839,7 +1839,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 22-missing-manual — missing manual
+## 22-missing-manual — missing / manual
 
 **Mother:** Forbidden question  
 **Gap:** Nobody warned me mornings look like this.
@@ -1926,7 +1926,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 23-one-variable — one variable
+## 23-one-variable — one / variable
 
 **Mother:** Information gap  
 **Gap:** I only changed one thing.
@@ -2013,7 +2013,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 24-second-wake — second wake
+## 24-second-wake — second / wake
 
 **Mother:** Almost + clock  
 **Gap:** The second wake keeps the house.
@@ -2100,7 +2100,7 @@ Do not run L0 critic on this file. Hooks are not captions.
 
 ---
 
-## 25-proof-cold — proof cold
+## 25-proof-cold — proof / cold
 
 **Mother:** Proof before name  
 **Gap:** Evidence with no title.
