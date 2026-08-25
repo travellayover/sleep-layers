@@ -35,6 +35,8 @@ One evening. One room. One person (Kiola). Four cards that read as a board, not 
 
 These are design stills, not a finished post. Pin description and Reel must still unsell. Do not run the cover alone.
 
+**Shoot:** do not animate these stills. Generate keyframes with the job LoRA (`layoverhq/kiola`, trigger `brnzbear`) after `6a8737129cd058584adc4094` completes. Full video plan: [`05-full-video-lora.md`](./05-full-video-lora.md).
+
 ---
 
 ## Copy lock (do not rewrite on the art)
